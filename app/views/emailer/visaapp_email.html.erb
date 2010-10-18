@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Excel FCU Visa Credit Card Application</title>
+	<style type="text/css">
+		table {width: 500px; font-family:Arial, Helvetica, sans-serif;	font-size: .8em; margin: 0 auto; padding: 0; border-collapse: collapse;	border: 2px solid #066;}
+		table td{padding: 10px 5px 0px 5px;	vertical-align: text-bottom;}
+		table th{text-align: center; padding: 5px; font-weight: bold; color: #fff; background-color: #366; font-size: 1.5em; height: 35px; line-height: 35px;}			
+		.first {text-align: right; font-weight: bold; width: 35%;}
+		tr.submitted{ background-color: #ccc; border-bottom: 1px solid #366; border-top: 1px solid #366;}
+		.right {text-align: right; color: #366;}	
+		.dotted {border-bottom: 1px dotted #333;}						
+		</style>			
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0">
+		<tr><th colspan="2">VISA CREDIT CARD APPLICATION</th>
+		</tr>
+		<tr class="submitted">
+		<td class="first">Submitted:</td>
+		<td><%= Time.now.strftime("%A, %B %d, %Y, %H:%M:%S") %></td>
+		</tr>  
+		<tr>
+		<td class="first">Visa Type:</td>
+		<td class="dotted"><%= @app.visa_type %></td>
+		</tr>
+		<tr>
+		<td class="first">Amount Requested:</td>
+		<td class="dotted"><%= @app.amount_requested %></td>
+		</tr>
+		<tr>
+		<td class="first">Name:</td>
+		<td class="dotted"><%= @app.applicant_name %></td>
+		</tr>
+		<tr>
+		<td class="first">Account No:</td>
+		<td class="dotted"><%= @app.applicant_account_number %></td>
+		</tr>
+		<tr>
+		<td class="first">Email:</td>
+		<td class="dotted"><%= @app.email_address %></td>
+		</tr>
+		<tr>
+		<td class="first">Address:</td>
+		<td class="dotted"><%= @app.applicant_address %></td>
+		</tr>
+		<tr>
+		<td class="first">City / State / Zip:</td>
+		<td class="dotted"><%= @app.applicant_city %> <%= @app.applicant_state %> <%= @app.applicant_zip %></td>
+		</tr>
+		<tr>
+		<td class="first">Time at Residence:</td>
+		<td class="dotted"><%= @app.applicant_time_at_residence %></td>
+		</tr>
+		<tr>
+		<td class="first">Ownership Status:</td>
+		<td class="dotted"><%= @app.applicant_ownership %></td>
+		</tr>
+		<tr>
+		<td class="first">Monthly Payment</td>
+		<td class="dotted"><%= @app.applicant_monthly_payment %></td>
+		</tr>
+		<tr>
+		<td class="first">Phone:</td>
+		<td class="dotted"><%= @app.applicant_home_phone %></td>
+		</tr>
+		<tr>
+		<td class="first">SSN:</td>
+		<td class="dotted"><%= @app.applicant_ssn %></td>
+		</tr>
+		<tr>
+		<td class="first">Birthdate:</td>
+		<td class="dotted"><%= @app.applicant_date_of_birth %></td>
+		</tr>
+		<tr>
+		<td class="first">Employer:</td>
+		<td class="dotted"><%= @app.applicant_employer %></td>
+		</tr>
+		<tr>
+		<td class="first">Position:</td>
+		<td class="dotted"><%= @app.applicant_position %></td>
+		</tr>
+		<tr>
+		<td class="first">Length of Time at Employer:</td>
+		<td class="dotted"><%= @app.applicant_length_of_employment %></td>
+		</tr>
+			<% if !@app.applicant_employer_address.blank? %>
+					<tr>
+					<td class="first">Employer Address:</td>
+					<td class="dotted"><%= @app.applicant_employer_address %></td>
+					</tr>
+					<tr>
+					<td class="first">Employer City/State/Zip</td>
+					<td><%= @app.applicant_employer_city %> <%= @app.applicant_employer_state %> <%= @app.applicant_employer_zip %></td>
+					</tr>
+					<tr>
+					<td class="first">Employer Phone:</td>
+					<td class="dotted"><%= @app.applicant_employer_phone %></td>
+					</tr>
+			<% end %>
+		<tr>
+		<td class="first">Gross Salary:</td>
+		<td class="dotted"><%= @app.applicant_gross_salary %> <%= @app.applicant_salary_frequency %></td>
+		</tr>
+			<% if !@app.applicant_other_income.blank? %>
+				<tr>
+				<td class="first">Other Source of Income:</td>
+				<td class="dotted"><%= @app.applicant_source_of_other_income %></td>
+				</tr>
+				<tr>
+				<td class="first">Other Income:</td>
+				<td class="dotted"><%= @app.applicant_other_income %></td>
+				</tr>
+					
+			<% end %>
+			
+			<% if !@app.coapplicant_name.blank? %>
+					<tr><th colspan="2">COAPPLICANT INFORMATION</th>
+					</tr>
+					<tr>
+					<td class="first">Name:</td>
+					<td class="dotted"><%= @app.coapplicant_name %></td>
+					</tr>
+					<tr>
+					<td class="first">Account No:</td>
+					<td class="dotted"><%= @app.coapplicant_account_number %></td>
+					</tr>
+					<tr>
+					<td class="first">Address:</td>
+					<td class="dotted"><%= @app.coapplicant_address %></td>
+					</tr>
+					<tr>
+					<td class="first">City / State / Zip:</td>
+					<td class="dotted"><%= @app.coapplicant_city %> <%= @app.coapplicant_state %> <%= @app.coapplicant_zip %></td>
+					</tr>
+					<tr>
+					<td class="first">Time at Residence:</td>
+					<td class="dotted"><%= @app.coapplicant_time_at_residence %></td>
+					</tr>
+					<tr>
+					<td class="first">Ownership Status:</td>
+					<td class="dotted"><%= @app.coapplicant_ownership %></td>
+					</tr>
+					<tr>
+					<td class="first">Monthly Payment</td>
+					<td class="dotted"><%= @app.coapplicant_monthly_payment %></td>
+					</tr>
+					<tr>
+					<td class="first">Phone:</td>
+					<td class="dotted"><%= @app.coapplicant_home_phone %></td>
+					</tr>
+					<tr>
+					<td class="first">SSN:</td>
+					<td class="dotted"><%= @app.coapplicant_ssn %></td>
+					</tr>
+					<tr>
+					<td class="first">Birthdate:</td>
+					<td class="dotted"><%= @app.coapplicant_date_of_birth %></td>
+					</tr>
+					<tr>
+					<td class="first">Employer:</td>
+					<td class="dotted"><%= @app.coapplicant_employer %></td>
+					</tr>
+					<tr>
+					<td class="first">Position:</td>
+					<td class="dotted"><%= @app.coapplicant_position %></td>
+					</tr>
+					<tr>
+					<td class="first">Length of Time at Employer:</td>
+					<td class="dotted"><%= @app.coapplicant_length_of_employment %></td>
+					</tr>
+							<% if !@app.coapplicant_employer_address.blank? %>
+									<tr>
+									<td class="first">Employer Address:</td>
+									<td class="dotted"><%= @app.coapplicant_employer_address %></td>
+									</tr>
+									<tr>
+									<td class="first">Employer City/State/Zip</td>
+									<td><%= @app.coapplicant_employer_city %> <%= @app.coapplicant_employer_state %> <%= @app.coapplicant_employer_zip %></td>
+									</tr>
+									<tr>
+									<td class="first">Employer Phone:</td>
+									<td class="dotted"><%= @app.coapplicant_employer_phone %></td>
+									</tr>
+							<% end %>
+					<tr>
+					<td class="first">Gross Salary:</td>
+					<td class="dotted"><%= @app.coapplicant_gross_salary %> <%= @app.coapplicant_salary_frequency %></td>
+					</tr>
+							<% if !@app.coapplicant_other_income.blank? %>
+								<tr>
+								<td class="first">Other Source of Income:</td>
+								<td class="dotted"><%= @app.coapplicant_source_of_other_income %></td>
+								</tr>
+								<tr>
+								<td class="first">Other Income:</td>
+								<td class="dotted"><%= @app.coapplicant_other_income %></td>
+								</tr>
+							<% end %>	
+					
+				<% end %>
+				<% if !@app.name_of_creditor1.blank?  or !@app.name_of_creditor2.blank? or !@app.name_of_creditor3.blank? or  !@app.name_of_creditor4.blank? or !@app.name_of_creditor5.blank? or !@app.name_of_creditor6.blank? or !@app.name_of_creditor7.blank? or !@app.name_of_creditor8.blank? %>
+					<tr><th colspan="2">CREDIT INFORMATION</th>
+					</tr>	
+					<% if !@app.name_of_creditor1.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor1 %> Balance: $<%= @app.current_balance1 %> Payment: $<%= @app.monthly_payment1 %></td>
+						</tr>
+					<% end %>	
+					
+					<% if !@app.name_of_creditor2.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor2 %> Balance: $<%= @app.current_balance2 %> Payment: $<%= @app.monthly_payment2 %></td>
+						</tr>
+					<% end %>	
+					<% if !@app.name_of_creditor3.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor3 %> Balance: $<%= @app.current_balance3 %> Payment: $<%= @app.monthly_payment3 %></td>
+						</tr>
+					<% end %>		
+					<% if !@app.name_of_creditor4.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor4 %> Balance: $<%= @app.current_balance4 %> Payment: $<%= @app.monthly_payment4 %></td>
+						</tr>
+					<% end %>		
+					<% if !@app.name_of_creditor5.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor5 %> Balance: $<%= @app.current_balance5 %> Payment: $<%= @app.monthly_payment5 %></td>
+						</tr>
+					<% end %>			
+					<% if !@app.name_of_creditor6.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor6 %> Balance: $<%= @app.current_balance6 %> Payment: $<%= @app.monthly_payment6 %></td>
+						</tr>
+					<% end %>		
+					<% if !@app.name_of_creditor7.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor7 %> Balance: $<%= @app.current_balance7 %> Payment: $<%= @app.monthly_payment7 %></td>
+						</tr>
+					<% end %>
+					<% if !@app.name_of_creditor8.blank? %>
+						<tr>
+						<td class="dotted" colspan="2">Name: <%= @app.name_of_creditor8 %> Balance: $<%= @app.current_balance8 %> Payment: $<%= @app.monthly_payment8 %></td>
+						</tr>
+					<% end %>	
+				<% end %>
+		<% if !@app.comments.blank? %>
+			<tr><th colspan="2">COMMENTS</th>
+			</tr>
+			<tr>
+			<td colspan="2"><%= @app.comments %></td>
+			</tr>
+		<% end %>
+		<tr class="submitted">
+		<td colspan="2" class="right">&copy; 2010 Share One, Inc.,  New Solutions</td>
+		</tr>  
+	</table>
+ </body>
+</html>

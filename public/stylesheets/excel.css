@@ -1,0 +1,797 @@
+body {
+	background-color: #ece9d8;
+	margin: 0;
+	padding: 0;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 80%;
+	width: 100%;
+	background-image: url(../images/page_bg.jpg);
+	background-repeat: repeat-y;
+	background-position: top center;
+}
+
+fieldset {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #015764;
+	text-decoration: underline;
+	border: 0 none;
+}
+
+
+
+a:visited {
+	color: #7e2a41;
+}
+
+
+a:focus{
+	outline: none;
+}
+
+a img {
+	border: 0 none;
+}
+
+dfn {
+	font-weight: bold;
+	font-style: normal;
+}
+
+h2 {
+	color: #7e2a41;
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 15px;
+	margin-bottom: 25px;
+}
+
+h3 {
+	color: #7e2a41;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-size: 1.5em;
+
+}
+
+h4 {
+	margin-bottom: 0;
+}
+
+small {
+	font-size: .8em;
+	font-family: verdana, geneva, sans-serif;
+}
+
+#header {
+	display: none;
+}
+
+/****** CONTAINER *****/
+#container {
+	margin: 0 auto 0 auto;
+	background-color:#fff;
+	width: 737px; 
+	padding-top: 106px;
+}
+
+
+
+/****** GLOBAL CLASSES*******/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.facebook{
+	margin: 0;
+	padding: 0;
+}
+.greentext {
+	color: #006666;
+}
+
+.redtext {
+	color: #990000;
+}
+
+.redtext2 {
+	color: #7e2a41;
+	font-weight: bold;
+}
+
+.bluetext {
+	color: #015764;
+}
+
+.centerblock {
+	display: block;
+	margin: 0 auto;
+}
+
+.inxleft {
+	float: left;
+	margin: 0;
+	padding-right: 15px;
+	width: 520px;
+	padding-bottom: 30px;
+}
+
+.inxright {
+	float: left;
+	padding: 0;
+	width: 200px;
+}
+
+.inxright ul {
+	list-style-image: url( '../images/ball.gif' );
+	list-style-type: circle;
+	margin: 20px 0;
+}
+
+.inxright img {
+	padding-top: 20px;
+
+}
+
+.graybox {
+	background-color: #ccc;
+	padding: 15px 15px 15px 20px;
+}
+
+.split50 {
+	width: 49%;
+	float: left;
+}
+
+.split50 h3{
+	font-weight: bold;
+	font-size: 12px;
+
+}
+
+/****** INDEX ******/
+#index h2 {
+	color: #006666;
+	font-size: 1.1em;
+}
+#index .banner {
+	margin: 20px auto 5px auto;
+	display: block;
+	overflow: hidden;
+}
+
+#index .banner2{
+	background-image: url(../images/top3.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	height: 15px;
+	width: 736px;
+	overflow: hidden;
+}
+#index #hbloginF {
+	width: 178px;
+	text-align: center;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#index #hbloginF h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.3em;
+	color: #1d3d4c;
+}
+
+#index #hbloginF h3 {
+	font-size: 1em;
+	font-weight: normal;
+	color: #000000;
+	margin:.2em 0 1em;
+}
+
+#index #hbloginF label {
+	color: #990000;
+	font-weight: bold;
+}
+
+#index #hbloginF input {
+	margin-bottom: .5em;
+}
+
+#index #hbloginF p {
+	margin: 0;
+}
+
+#index #hbloginF img {
+	margin-top: 5px;
+}
+
+#index #middle {
+	width: 365px;
+	float: left;
+	padding: 0 10px;
+	}
+
+#index #middle #welcome{
+	background-image:url(../images/grad_paragraph.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding: 0px 10px 25px 10px;
+}
+
+.welcome {
+	height: 58px;
+	width: 365px;
+	background-image: url(../images/welcome.jpg);
+	background-position: top left;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.welcome h2{
+	display: none;
+}
+
+#index #middle #welcome p{
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+
+
+#index #middle table{
+	margin: 20px auto;	
+}
+#index #middle table td{
+	vertical-align: top;
+	padding: 5px;
+	
+}
+
+#index #join {
+	float: left;
+	width: 165px;
+
+
+}
+
+#index #join h2 {
+	font-size: 1.1em;
+	margin: 10px 0 10px 0;
+	padding:0;
+	text-align: left;
+	
+}
+
+#index #join h2 .redtext {
+	margin-right: .5em;
+}
+
+#index #join a {
+	text-decoration: none;
+
+}
+
+#index #join a.green{
+	color: #006666;
+}
+
+/***** ATM LOCATIONS ******/
+#atmservice #atmpartners {
+	list-style-type: none;
+	text-align: center;
+	width: 550px;
+	vertical-align: middle;
+	
+}
+
+#atmservice #atmpartners li {
+	display: inline-block;
+	margin: 10px 10px;
+}
+
+
+.banner {
+	margin: 20px auto 5px auto;
+	border: none;
+	z-index: 0;
+	display: block;
+}
+
+.blueheader{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #1D3D4C;
+	margin: 0 auto;
+	font-size: 16px;
+	clear: both;
+}
+
+
+
+.bold {
+	font-weight: bold;
+}
+
+.gray {
+	background-color: #ccc;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 15px;
+	padding-left: 20px;
+	font-size: .8em;
+}
+
+.quote {
+	font-style: italic;
+	margin-left: 6em;
+	margin-right: 6em;
+}
+
+
+
+/********** FOOTER ************/
+#footer {
+	height: 31px;
+	margin-top: 15px;
+	padding-bottom: 100px;
+	clear: both;
+}
+
+#footerbar {
+	background: #ffffff url( '../images/footer_bar.jpg' ) center left no-repeat;
+	width: 736px;
+	height: 100%;
+	text-align: center;
+}
+
+#footerbar a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: .9em;
+	color: #1d3c4e;
+	padding: .7em 0;
+	margin: 0 1em;
+	display: inline-block;
+}
+
+#footerbar a.suggestion {
+	float: left;
+	padding-left: 60px;
+	clear: none;
+}
+
+#footerbar a.contact {
+	float: right;
+	clear: none;
+}
+
+/**********INDEX PAGE************/
+
+
+
+.ads {
+	height: 165px;
+	z-index: 0;
+	margin: 0;
+}
+
+.ads a {
+	display: inline-block;
+	margin: 0 1px;
+}
+
+#netbranch{
+	width: 178px;
+	background-color:#ccc;
+	float: left;
+	line-height: 13px;
+	position: relative;
+	}
+
+#netbranch input{
+	margin-bottom: 10px;
+}
+
+.cc {
+	padding-top: 5px;
+}
+
+
+.verdana {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+}
+
+#join a{
+	color: #000;
+	text-decoration: none;
+}
+
+#join a:visited{
+	color: #000;
+}
+#join a:hover{
+	text-decoration: underline;
+}
+
+
+/*********** SECTION INDEX PAGES ****************/
+
+
+#container2 {
+	margin:0 auto;
+	background-color:#fff;
+	width: 737px;
+}
+
+
+
+.inxleft {
+	float: left;
+	margin: 0;
+	padding-right: 15px;
+	text-align: left;
+	position: relative;
+	width: 520px;
+	padding-bottom: 30px;
+	
+}
+
+.inxright {
+	float: left;
+	padding: 0;
+	text-align: left;
+	width: 200px;
+	
+
+}
+.inxright ul{
+	list-style-type:none;
+	margin: 22px 0;
+	padding: 0;
+
+}
+.inxright ul li{
+	background-image:url(../images/ball.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-left: 20px;
+	display: block;
+	float: left;
+	width: 180px;
+	margin-bottom: 4px;
+	
+
+}
+
+.inxright img{
+	padding-top: 20px;
+
+}
+
+.inxleft img {
+	text-align: center;
+
+}
+
+.inxcenter {
+	width: 535px;
+	margin: 0 auto;
+	display: block;
+
+	
+}
+
+.tableheadinginx a{
+	background-color: #ddddbc;
+	text-align: center;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	}
+
+.tablecell a{
+	background-image: url(../images/ball.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding: 10px 10px 10px 20px;
+	text-align: left;
+	width: auto;
+}
+	
+.contentcenter {
+	width: 740px;
+	margin: 0;
+	display: block;
+
+}	
+
+.newsletter{
+	line-height: 20px;
+}
+
+.underline {
+	text-decoration: underline;	
+}
+.membergroups{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #7e2a41;
+	font-size: 1.5em;
+}
+
+.backtotop{
+	font-size: .8em;
+	text-transform: uppercase;
+	
+}
+
+.disclaimer {
+	font-size: 10px;
+}
+
+
+.calculators {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	width: 900px;
+}
+.calculators ul{
+	list-style-type: none;
+	margin: 0 20px 0 15px;
+	padding: 0;
+	width: 80%;
+	
+
+}
+.calculators ul li{
+	background-image:url(../images/ball.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-left: 20px;
+	display: block;
+	float: left;
+	width: 45%;
+	margin-bottom: 4px;
+	
+
+}
+
+.topspace{
+	padding-top: 25px;
+	margin-bottom: 10px;
+}
+
+.ratestable {
+	color: #fff;
+	background-color: #015f67;
+	text-align: center;
+}
+
+
+.ratestable2 {
+	color: #fff;
+	background-color: #015f67;
+	font-weight: bold;
+
+}
+.ratestable3 {
+	color: #fff;
+	background-color: #7e2a41;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.setwidth{
+	width: 25%;
+	
+}
+
+.first{
+	width: 50%;
+}
+
+.second{
+	width: 25%;
+}
+.indent {
+	padding-left: 35px;
+}
+
+.contacts {
+	width: 25em;
+	margin-top: 20px;
+	float: left;
+	margin-left: 40px;
+}
+
+.atmlocations{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #015f67;
+	text-decoration: underline;
+}
+
+.savenwin{
+	color: #609;
+}
+
+.visarates{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.large{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#contactus h3 {
+	color: #7e2a41;
+	margin-bottom: 0;	
+}
+
+#contactus .split50 p {
+	margin-top: 0;
+}
+
+.italic {
+		font-style: italic;
+}
+
+table#buspay {width:70%; margin-left:15%; margin-right:15%;}
+table#center {margin-left:auto; margin-right:auto; text-align: center;}
+
+.middle{
+	vertical-align: middle;
+}
+
+.image {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.bgcolor{
+	background-color: #dddbc;
+	margin: 0;
+	padding: 0;
+}
+
+td.half {
+	width: 50%;
+}
+td.left{
+	text-align: left;
+}
+
+
+#rege em {
+	font-weight: bold;
+}
+#rege dl.regefaq dt {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 1em;
+}
+
+#rege dl.formfields {
+	margin: 0;
+}
+#rege dl.formfields dt {
+	float: left;
+	clear: left;
+	width: 15em;
+	position: relative;
+	padding: 0 .5em;
+	margin: 0 0 .5em 0;
+	line-height: 2em;
+}
+
+#rege dl.formfields dt label {
+	line-height: 2em;
+	font-weight: bold;
+}
+
+#rege dl.formfields dd {
+	margin: 0 0 .5em 16.5em;
+	clear: right;
+	line-height: 2em;
+}
+
+
+#rege #formerrors {
+	border: 1px solid #ff0000;
+	background-color: #e0e0e0;
+	padding: 1em;
+	margin: 1em;
+}
+
+#rege #formerrors strong {
+	color: #ff0000;
+}
+
+#rege #formerrors ul {
+	list-style-type: none;
+}
+
+/**  SLIDESHOW **/
+.slidecontent{
+position: relative; 
+overflow: hidden; 
+width: 736px; 
+height: 200px;
+z-index: 0;
+}
+
+
+
+.slidecontent .contentdiv{
+visibility: hidden; 
+position: absolute; 
+left: 0;  
+top: 0;  
+padding: 0;
+width: 736px; 
+height: 100%;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+z-index:0;
+}
+
+.pagination{
+width: 725px; 
+text-align: right;
+background-color: #fff;
+padding: 5px 10px;
+z-index: 0;
+}
+
+.pagination a{
+padding: 0 5px;
+text-decoration: none; 
+color: #1d3d4c;
+background: #ccc;
+border: 1px solid #000;
+z-index: 0;
+}
+
+.pagination a:hover, .pagination a.selected{
+color: #fff;
+background-color: #1d3d4c;
+z-index: 0;
+}
+
+.ncua{
+	background-color: #fff;
+	padding-top: 20px;
+	width: 100%;
+}
+
+.facebook{
+	margin-top: 25px;
+}
+

@@ -1,0 +1,95 @@
+#forms table{
+	width: 500px;
+	height: auto;
+	border: 2px solid #839388;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0 auto;
+	background-color:#b5c2b9;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#forms td{
+	vertical-align: top;
+	padding: 5px 10px 5px 10px;
+}
+
+#forms th {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+#forms td.small{
+	font-weight: normal;
+	font-size: 10px;
+	text-align: left;
+	vertical-align: top;
+
+}
+
+#forms tr.borderbottom{
+	border-bottom: 2px solid #839388;
+}
+
+#forms tr.borderbottom td{
+	padding-bottom: 15px;
+}
+
+#forms label{
+	font-weight: normal;
+	font-size: 10px;
+}
+
+#forms input{
+	border: 1px solid #839388;
+}
+#forms input:focus{
+	background-color: #fafbd1;
+	border: 1px solid #839388;
+}
+
+#forms input.radio{
+	border: none;
+}
+
+#forms select:focus{
+	background-color: #fafbd1;
+}
+
+#forms select{
+	border: 1px solid #839388;
+}
+
+#forms .submit {
+	background-image:url(../images/formsubmitbg.jpg);
+	background-repeat: repeat-x;
+	height: 33px;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+#formerrors {
+	border: 1px solid #ff0000;
+	background-color: #fafbd1;
+	padding: 1em;
+	margin: 1em;
+}
+
+#formerrors strong {
+	color: #ff0000;
+}
+
+#formerrors ul {
+	list-style-type: none;
+}
+
+.red {
+	color: #f00;
+	font-size: 12px;
+}
+
+

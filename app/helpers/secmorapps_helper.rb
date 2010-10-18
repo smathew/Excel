@@ -1,0 +1,2 @@
+module SecmorappsHelper
+end

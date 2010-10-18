@@ -1,0 +1,107 @@
+<div id="container2">
+  <div class="banner">
+    <div id="forms">
+		<% form_for(@atmdebitcardapp) do |f| %>
+			<%= f.error_messages %>
+			<h2>Important Information Regarding ATM &amp; Debit Cards</h2>
+			   <p>In order to apply for an EXCEL Federal Credit Union Debit or ATM Card via this site, you must currently be an EXCEL FCU member.  If you are not a member, please <%= link_to "click here", forms_new_member_path %> and learn how to join. </p>
+				<p>ATM cards are available for members that have a savings account only.  ATM cards do not earn ScoreCard&reg; Rewards.  </p>
+				<p>For members who have an EXCEL Federal Credit Union checking account, a MasterCard&reg; Debit Card is issued.  (If you would like to establish an Excel checking account, submit a <%= link_to "Checking Account Application", new_shareapp_path %> and we’ll contact you no later than the next business day regarding your request). EXCEL debit cards provide access to both checking and savings accounts.</p>
+				<p>EXCEL debit cards earn <%= link_to "ScoreCard&reg; Rewards", "http://www.scorecardrewards.com", :rel=>"confirm external" %> when purchases are authorized with a signature (not a PIN).  Reward points are redeemable for travel and merchandise.</p>
+				<p>To receive your new ATM or Debit Card, please complete and submit the application below.  For more information about our rewards program, visit the <%= link_to "ScoreCard&reg; Rewards", "http://www.scorecardrewards.com", :rel=>"confirm external" %> website.</p>
+				<p class="center bold"><%= link_to image_tag("scorecardlogo.jpg", :alt=>""), "http://www.scorecardrewards.com", :rel=>"confirm external" %><br />Rewards Program for Members<br />
+		with EXCEL Debit and Credit Cards </p>
+
+		<h2>ATM/Debit Card Application</h2>
+		<p>If you are already a member with a savings and/or checking account and would like to apply for an ATM or Debit Card, please provide all of the requested information below and submit the application when prompted.  We will respond to your request via email or phone as quickly as possible. </p>
+		<table>
+		  <tr>
+			<th scope="row" colspan="3">Applicant Information:</th>
+		  </tr>
+		  <tr>
+			<td><label for="appName">Name<span class="red">*</span></label><%= f.text_field :name %></td>
+			<td><label for="appAcct">Account Number<span class="red">*</span></label><%= f.text_field :account_number %></td>
+			<td><label for="appSSN">Social Security No.(XXX-XX-XXXX)<span class="red">*</span></label><%= f.text_field :ssn %></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><label for="appAddr">Address<span class="red">*</span></label><%= f.text_field :address %></td>
+			<td><label for="appBirthdate">Birthdate (MM/DD/YYYY)<span class="red">*</span></label><%= f.text_field :date_of_birth, :maxlength=>10 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appCity">City<span class="red">*</span></label><%= f.text_field :city %></td>
+			<td><label for="appState">State<span class="red">*</span></label><%= f.select( :state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+					  </td>
+			<td><label for="appZip">Zip<span class="red">*</span></label><br /><%= f.text_field :zip, :size=>10, :maxlength => 5 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appHomePhone">Home Phone(XXX-XXX-XXXX)</label><%= f.text_field :home_phone, :maxlength => 12 %></td>
+			<td><label for="appWorkPhone">Work Phone(XXX-XXX-XXXX)</label><%= f.text_field :work_phone, :maxlength => 12 %></td>
+			<td><label for="appCellPhone">Cell Phone(XXX-XXX-XXXX)</label><%= f.text_field :cell_phone, :maxlength => 12 %></td>
+		  </tr>
+		<tr>
+			<td colspan="2"><label for="appEmail">Email<span class="red">*</span></label><br /><%= f.text_field :email_address, :size => 45 %></td>
+			<td><label for="appEmployer">Employer<span class="red">*</span></label><%= f.text_field :employer %></td>
+		</tr>
+		  <tr>
+			<td colspan="3" class="small"><p>By submitting this application, you authorize EXCEL Federal Credit Union to gather whatever credit and employment information considered appropriate, including information from various credit reporting agencies.</p></td>
+		  </tr>		  
+		  <tr>
+			<td colspan="3" class="center"><%= f.submit 'Submit Application', :class=>"submit" %></td>
+		  </tr>
+		</table>
+	<% end %>
+	</div>
+  </div>
+</div>

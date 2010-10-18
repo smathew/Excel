@@ -1,0 +1,91 @@
+<div id="index" class="clearfix">
+  			<div class="banner">
+				<div id="manual_slideshow" class="slidecontent">
+                        <div class="contentdiv">
+                            <%= link_to image_tag("ad_winafreetv.jpg", :alt => ""),mobilebanking_path %>
+                        </div>
+                        <div class="contentdiv">
+                            <%= link_to image_tag("ad_saveasyoupay.jpg", :alt=>""), loans_saveasyoupay_path %>
+                        </div>
+                        
+                  </div>
+                  <div id="paginate-manual_slideshow" class="pagination">
+                  </div>
+                    <script type="text/javascript">
+                    featuredcontentslider.init({
+                        id: "manual_slideshow",  
+                        contentsource: ["inline", ""],  
+                        toc: "#increment",  
+                        nextprev: ["", ""],  
+                        revealtype: "click", 
+                        enablefade: [true, 0.2], 
+                        autorotate: [true, 8000],  
+                        onChange: function(previndex, curindex){  
+                        }
+                    })
+                    </script>
+            </div>
+            <div class="banner2"></div>
+			
+            <!-- AD BLOCKS 
+			<p>
+				<%= link_to image_tag("ad_1.gif", :alt=>""), "http://www.clickvue.com/bp/excel0819.html", :rel=>"confirm" %>
+				<%= link_to image_tag("ad_3.gif", :alt=>""), loans_auto_path %>
+				<%= link_to image_tag("ad_2.gif", :alt=>""), loans_homeequity_path %>
+				<%= link_to image_tag("ad_4.gif", :alt=>""), checking_accts_path %>
+			</p>
+            -->
+            <div id="netbranch" class="clearfix">
+			<form id="hbloginF" method="post" action="hbv3_2/login.asp">
+				<h2>NetBranch</h2>
+				<h3>Online Banking and Bill Pay</h3>
+				<fieldset>
+					<input type="hidden" name="creditunion" value="9146" />
+					<input type="hidden" name="fiId" value="155" />
+					<input type="hidden" name="RSA" value="ON" />
+					<input type="hidden" name="service" value="Excel Home Banking" />
+					<input type="hidden" name="cuname" value="EXCEL" />
+					<input type="hidden" name="emailContact" value="info@excelfcu.org" />
+					<label for="hbloginFaccount">Member Number:</label>
+					<input type="text" name="account" id="hbloginFaccount" size="12" class="centerblock" />
+					<label for="hbloginFpin">Password:</label>
+					<input type="password" name="pin" id="hbloginFpin" size="12" class="centerblock" />
+					<input type="submit" value="Log In" />
+				</fieldset>
+				<p>
+					<span class="disclaimer"><%= link_to "New User/Forgot Password?", new_pinrequest_path %></span><br /><br />
+					<span class="disclaimer">Credit card information is displayed after logging into NetBranch</span>
+				</p>
+			</form>
+            </div>
+	<div id="middle" class="clearfix">
+		<!-- WELCOME PARAGRAPH -->
+			<div id="welcome">
+			<span class="welcome"><h2>Welcome!</h2></span>
+			<p>Excel Federal Credit Union is a full-service financial institution based in Norcross, Georgia. While the majority of our members reside in Georgia, we serve members who live, work and travel throughout the world.</p>
+			<p>Our main purpose is to help members &quot;get-ahead&quot; financially, while providing professional, knowledgeable and personal service. We were established in 1952 to serve members who work for the federal government and have since expanded to provide financial benefits to employees and individuals of over 400 associations and businesses throughout the state.</p>
+			<p>If you would like to join our credit union or apply for a loan, please call 770-441-9235 or submit an online <%= link_to "new member application", forms_new_member_path %> or <%= link_to "loan application", new_loanapp_path %> now. General questions may also be emailed to <%= mail_to  "info@excelfcu.org?Subject=Contact from Website", "info@excelfcu.org", :class=>"suggestion", :onclick=>"javascript: return confirm('Please be advised that by sending us an email via this link that your email may not be secure. Do not submit any confidential information through this link (for example your social security, credit card or account number). If you have specific account inquiries that require you to send us confidential information, please use our secure email by logging onto NetBranch Online Banking using your account number and password, or call the credit union at 770-441-9235 or 1-888-441-9235 for further assistance. Thank you.')" %>.</p>
+			<p>We look forward to serving you!</p>
+			</div>
+				<table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td><%= image_tag "ncuabw2.jpg", :alt=>"" %><br /><span class="disclaimer">Federally Insured by NCUA</span></td>
+                        <td><%= link_to image_tag("facebook.gif", :alt=>""), "http://www.facebook.com/pages/Norcross-GA/Excel-Federal-Credit-Union/95829364264?ref=ts", :rel=>"confirm external" %></td>
+                        <td><%= image_tag "equal_housecomp.jpg", :alt=>"" %></td>
+                  </tr>
+      </table>
+                
+    </div>
+	  <div id="join" class="clearfix">
+		  <h2><span class="redtext">&gt;</span>Join EXCEL TODAY!</h2>
+		  <%= image_tag "join.jpg", :alt=>"Join" %>
+		  <p>
+			  Members get benefits banks can&#39;t match.&nbsp; Switching to <span class="greentext">EXCEL</span>
+			  is easier than you think.
+		  </p>
+		  <p>
+		    <small><span class="redtext"><strong>&raquo;&nbsp;</strong></span><strong><%= link_to "Become A Member", forms_new_member_path %></strong></small><br />
+			  <small><span class="redtext"><strong>&raquo;&nbsp;</strong></span><strong><%= link_to "Switch to EXCEL Checking", checking_accts_path %></strong></small>
+		  </p>
+	  </div>
+</div>

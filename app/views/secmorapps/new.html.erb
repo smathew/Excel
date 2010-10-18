@@ -1,0 +1,484 @@
+<div id="container2">
+  <div class="banner">
+    	<div id="forms">
+        <h2>Fixed Rate Second Mortgage</h2>
+		<% form_for(@secmorapp) do |f| %>
+			<%= f.error_messages %>
+			<p>Home Equity loans are offered on owner occupied, single family homes, townhomes and condominiums located in Georgia, Florida, North Carolina, South Carolina and Tennessee. </p>
+<p><span class="bold">Current Members</span><br />
+If you are already a member of EXCEL, please provide the requested information below and submit for review. If you do not have your account number available, please insert '1234567' in the account number field. We will respond to your request no later than the next business day.</p>
+
+		<p><span class="bold">Non Members</span><br />
+		If you would like to apply for a loan before becoming a member, you may do so, however membership will be required once you are approved to receive a loan from EXCEL and before we can disburse any funds. To apply for a loan without becoming a member yet, please complete the application below and we will respond to your request by the next business day.
+		</p>
+
+		<p>If you would like to join our credit union now, please submit a <%= link_to "Membership Application", forms_new_member_path %>.</p>
+
+		<p><span class="bold">All Applicants</span><br />
+		By submitting the application below you authorize EXCEL Federal Credit Union to gather whatever credit and employment information considered appropriate, including information from various credit reporting agencies.</p>
+
+		<p>Any applicants, co-maker &amp; joint borrowers will be individually and jointly held responsible for paying all amounts owed. </p>
+		<table>
+		  <tr>
+			<th scope="col" colspan="3">Loan Information</th>
+
+		  </tr>
+		  <tr class="borderbottom">
+			<td>
+					  <label for="loanType">Loan Type:<span class="red">*</span> </label><br /><%= f.select( :loan_type,
+						{ "Fixed Rate 7 Year" => "Fixed Rate 7 Year", 
+						  "Fixed Rate 10 Year" => "Fixed Rate 10 Year", 
+						  "Fixed Rate 12 Year" => "Fixed Rate 12 Year", 
+						  "Fixed Rate 15 Year" => "Fixed Rate 15 Year"
+						 }) %>
+			</td>
+			<td colspan="2">
+			<label for="loanAmt">Loan Amount Requested<span class="red">*</span></label><br /><%= f.text_field :amount_requested %></td>
+		  
+			
+		  </tr>
+		  <tr>
+			<th scope="row" colspan="3">Applicant Information:</th>
+		  </tr>
+		  <tr>
+			<td><label for="appName">Name<span class="red">*</span></label><%= f.text_field :applicant_name %></td>
+			<td><label for="appAcct">Account Number<span class="red">*</span></label><%= f.text_field :applicant_account_number %></td>
+			<td><label for="appSSN">Social Security No.(XXX-XX-XXXX)<span class="red">*</span></label><%= f.text_field :applicant_ssn, :maxlength => 11 %></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><label for="appAddr">Address<span class="red">*</span></label><br /><%= f.text_field :applicant_address, :size => 46 %></td>
+			<td><label for="appBirthdate">Birthdate (MM/DD/YYYY)<span class="red">*</span></label><%= f.text_field :applicant_date_of_birth, :maxlength => 10 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appCity">City<span class="red">*</span></label><br /><%= f.text_field :applicant_city %></td>
+			<td><label for="appState">State<span class="red">*</span></label><br /><%= f.select( :applicant_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+					  </td>
+			<td><label for="appZip">Zip<span class="red">*</span></label><br /><%= f.text_field :applicant_zip, :size => 10, :maxlength => 5 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appPhone">Home Phone(XXX-XXX-XXXX)<span class="red">*</span></label><%= f.text_field :applicant_home_phone, :maxlength => 12 %></td>
+			<td><label for="appWorkPhone">Work Phone(XXX-XXX-XXXX)</label><%= f.text_field :applicant_work_phone, :maxlength => 12 %></td>
+			<td><label for="appCellPhone">Cell Phone(XXX-XXX-XXXX)</label><%= f.text_field :applicant_cell_phone, :maxlength => 12 %></td>
+			</tr>
+			<tr class="borderbottom">
+			
+			<td><label for="appTime">Time At Residence<span class="red">*</span></label><%= f.text_field :applicant_time_at_residence %>
+			</td>
+			<td><label for="appPayment">Monthly Payment<span class="red">*</span></label><%= f.text_field :applicant_monthly_payment %></td>
+			<td class="small">			
+				<%= f.radio_button("applicant_ownership", "Own/Buying") %>Own/Buying
+			<%= f.radio_button("applicant_ownership", "Rent") %>Rent<br />
+			<%= f.radio_button("applicant_ownership", "Live With Relatives") %>Live With Relatives<br />
+			<%= f.radio_button("applicant_ownership", "Other") %>Other</td>
+		  </tr>
+		  <tr>
+			<td colspan="3" class="bold center">Employment Information (Applicant)</td>
+		  </tr>
+		  <tr>
+			<td><label for="appEmployer">Employer<span class="red">*</span></label><%= f.text_field :applicant_employer %></td>
+			<td><label for="appPosition">Position<span class="red">*</span></label><%= f.text_field :applicant_position %></td>
+			<td><label for="appLength">Length of Employment<span class="red">*</span></label><%= f.text_field :applicant_length_of_employment %></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><label for="appEmployerAddr">Employer Address</label><br /><%= f.text_field :applicant_employer_address, :size => 46 %></td>
+			<td><label for="appEmployerPhone">Employer Phone(XXX-XXX-XXXX)</label><%= f.text_field :applicant_employer_phone, :maxlength => 12 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appEmployerCity">City</label><br /><%= f.text_field :applicant_employer_city %></td>
+			<td><label for="appEmployerState">State</label><br /><%= f.select( :applicant_employer_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+							</td>
+							<td><label for="appEmployerZip">Zip</label><br /><%= f.text_field :applicant_employer_zip, :size => 10, :maxlength => 5 %></td>
+		  </tr>
+		  <tr>
+			<td class="small"><label for="appGrossSalary">Gross Salary<span class="red">*</span></label><br /><%= f.text_field :applicant_gross_salary %></td>
+			<td><label for="appGrossOther">Other Gross Monthly Income</label><br /><%= f.text_field :applicant_other_income %>
+  </p></td>
+			<td><label for="appGrossOtherSrc">Source of Other Income</label><br /><%= f.text_field :applicant_source_of_other_income %></td>
+			</tr>
+			<tr class="borderbottom">
+			<td class="small"><%= f.radio_button("applicant_salary_frequency", "Weekly") %>Weekly
+			<%= f.radio_button("applicant_salary_frequency", "Semi-Monthly") %>Semi-Monthly<br />
+			<%= f.radio_button("applicant_salary_frequency", "Bi-Weekly") %>Bi-Weekly
+			<%= f.radio_button("applicant_salary_frequency", "Monthly") %>Monthly
+			</td>
+			<td colspan="2" class="small">Alimony, child support, or separate maintenance need not be revealed unless you want such income considered as a basis for  repayment of this obligation.</td>
+		  </tr>		  
+		  <!-- COAPP -->
+			<tr>
+			<th scope="row" colspan="3">Co-Applicant Information:</th>
+		  </tr>
+		  <tr>
+			<td><label for="coappName">Name</label><br /><%= f.text_field :coapplicant_name %></td>
+			<td><label for="coappAcct">Account Number (if available)</label><%= f.text_field :coapplicant_account_number %></td>
+			<td><label for="coappSSN">Social Security No.(XXX-XX-XXXX)</label><%= f.text_field :coapplicant_ssn %></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><label for="coappAddr">Address</label><br /><%= f.text_field :coapplicant_address, :size => 46 %></td>
+			<td><label for="coappBirthdate">Birthdate (MM/DD/YYYY)</label><%= f.text_field :coapplicant_date_of_birth, :maxlength => 10 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="coappCity">City</label><br /><%= f.text_field :coapplicant_city %></td>
+			<td><label for="coappState">State</label><br /><%= f.select( :coapplicant_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+					  </td>
+			<td><label for="coappZip">Zip</label><br /><%= f.text_field :coapplicant_zip, :size => 10, :maxlength => 5 %></td>
+		  </tr>
+		  <tr class="borderbottom">
+			<td><label for="coappPhone">Phone(XXX-XXX-XXXX)</label><br /><%= f.text_field :coapplicant_home_phone, :maxlength => 12 %></td>
+			<td><label for="coappTime">Time At Residence</label><%= f.text_field :coapplicant_time_at_residence %>
+			</td>
+			<td class="small"><label for="coappPayment">Monthly Payment</label><%= f.text_field :coapplicant_monthly_payment %><br />
+			
+				<%= f.radio_button("coapplicant_ownership", "Own/Buying") %>Own/Buying
+			<%= f.radio_button("coapplicant_ownership", "Rent") %>Rent<br />
+			<%= f.radio_button("coapplicant_ownership", "Other") %>Other</td>
+		  </tr>
+		  <tr>
+			<td colspan="3" class="bold center">Employment Information (Co-Applicant)</td>
+		  </tr>
+		  <tr>
+			<td><label for="coappEmployer">Employer</label><%= f.text_field :coapplicant_employer %></td>
+			<td><label for="coappPosition">Position</label><%= f.text_field :coapplicant_position %></td>
+			<td><label for="coappLength">Length of Employment</label><%= f.text_field :coapplicant_length_of_employment %></td>
+		  </tr>
+		  <tr>
+			<td colspan="2"><label for="coappEmployerAddr">Employer Address</label><br /><%= f.text_field :coapplicant_employer_address, :size => 46 %></td>
+			<td><label for="coappEmployerPhone">Employer Phone(XXX-XXX-XXXX)</label><%= f.text_field :coapplicant_employer_phone, :maxlength => 12 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="coappEmployerCity">City</label><br /><%= f.text_field :coapplicant_employer_city %></td>
+			<td><label for="coappEmployerState">State</label><br /><%= f.select( :coapplicant_employer_state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+							</td>
+							<td><label for="coappEmployerZip">Zip</label><br /><%= f.text_field :coapplicant_employer_zip, :size => 10, :maxlength => 5 %></td>
+		  </tr>
+		  <tr>
+			<td class="small"><label for="coappGrossSalary">Gross Salary</label><br /><%= f.text_field :coapplicant_gross_salary %></td>
+			<td><label for="coappGrossOther">Other Gross Monthly Income</label><br /><%= f.text_field :coapplicant_other_income %></td>
+			<td><label for="coappGrossOtherSrc">Source of Other Income</label><br /><%= f.text_field :coapplicant_source_of_other_income %></td>
+			</tr>
+			<tr class="borderbottom">
+			<td class="small"><%= f.radio_button("coapplicant_salary_frequency", "Weekly") %> Weekly
+			<%= f.radio_button("coapplicant_salary_frequency", "Semi-Monthly") %> Semi-Monthly<br />
+			<%= f.radio_button("coapplicant_salary_frequency", "Bi-Weekly") %> Bi-Weekly
+			<%= f.radio_button("coapplicant_salary_frequency", "Monthly") %> Monthly
+			
+			</td>
+			<td colspan="2" class="small">Alimony, child support, or separate maintenance need not be revealed unless you want such income considered as a basis for  repayment of this obligation.</td>
+
+		  </tr>
+			<tr>
+			<td colspan="3" class="bold center">Mortgage Information</td>
+			
+		  </tr>
+		  <tr>
+			<td><label for="mortType">Mortgage Type:<span class="red">*</span></label></td>
+			<td colspan="2"><%= f.select( :mortgage_type,
+						{ "House" => "House", 
+						  "Townhome" => "Townhome", 
+						  "Condominium" => "Condominium"
+						 }) %>
+			 </td>
+		  </tr>
+			<tr>
+			<td><label for="estValue">Estimated Value of Home:<span class="red">*</span></label></td>
+			<td colspan="2">
+			<%= f.text_field :estimated_value_of_home %>
+			 </td>
+		  </tr>
+			  <tr>
+			<td><label for="annTax">Annual Property Tax Amount:<span class="red">*</span></label></td>
+			<td colspan="2">
+			<%= f.text_field :annual_property_tax_amount %>
+			 </td>
+		  </tr>
+		<tr class="borderbottom">
+			<td><label for="annTax">Annual Homeowners' Insurance Amount:<span class="red">*</span></label></td>
+			<td colspan="2">
+			<%= f.text_field :annual_homeowners_insurance %>
+			 </td>
+		  </tr>  
+		  
+		  
+		  <tr>
+			<td colspan="3" class="bold center">Credit Information</td>
+			
+		  </tr>
+		  <tr>
+			<td class="small center">Name of Creditor</td>
+			<td class="small center">Current Balance</td>
+			<td class="small center">Monthly Payment</td>
+		  </tr>
+		  <tr>
+			<td><%= f.text_field :name_of_creditor1 %></td>
+			<td><%= f.text_field :current_balance1 %></td>
+			<td><%= f.text_field :monthly_payment1 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor2 %></td>
+			<td><%= f.text_field :current_balance2 %></td>
+			<td><%= f.text_field :monthly_payment2 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor3 %></td>
+			<td><%= f.text_field :current_balance3 %></td>
+			<td><%= f.text_field :monthly_payment3 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor4 %></td>
+			<td><%= f.text_field :current_balance4 %></td>
+			<td><%= f.text_field :monthly_payment4 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor5 %></td>
+			<td><%= f.text_field :current_balance5 %></td>
+			<td><%= f.text_field :monthly_payment5 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor6 %></td>
+			<td><%= f.text_field :current_balance6 %></td>
+			<td><%= f.text_field :monthly_payment6 %></td>
+		  </tr>
+			<tr>
+			<td><%= f.text_field :name_of_creditor7 %></td>
+			<td><%= f.text_field :current_balance7 %></td>
+			<td><%= f.text_field :monthly_payment7 %></td>
+		  </tr>
+			<tr class="borderbottom">
+			<td><%= f.text_field :name_of_creditor8 %></td>
+			<td><%= f.text_field :current_balance8 %></td>
+			<td><%= f.text_field :monthly_payment8 %></td>
+		  </tr>
+		 
+		  
+		  <tr>
+			<td colspan="3"><label for="comments">Comments/Questions</label><br />
+			<%= f.text_area :comments, :rows=>5, :cols=> 57 %>
+			</td>
+		  </tr>
+		  <tr class="borderbottom">
+			<td colspan="3"><label for="email">Your Email Address (for correspondence)<span class="red">*</span></label><br />
+			<%= f.text_field :email_address, :size => 46 %>
+			</td>
+		  </tr>
+		  
+		  <tr>
+			<td colspan="3" class="small"><p>By submitting this application, you authorize EFCU to gather whatever credit and employment information considered appropriate, including information from various credit reporting agencies.</p>
+		 
+		<p>Applicants/Co-maker/Joint borrower: We intend to apply for joint credit and understand that we are individually and jointly responsible for paying all amounts owed.</p></td>
+		  </tr>
+		  
+		  <tr>
+			<td colspan="3" class="center"><%= f.submit 'Submit Application' %></td>
+		  </tr>
+		</table>
+		<% end %>
+      </div>  
+  </div>
+ </div>

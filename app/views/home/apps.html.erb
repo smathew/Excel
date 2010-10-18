@@ -1,0 +1,45 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxleft">
+    <h2>Applications</h2>
+    <p>At EXCEL, we make it easy for you to open 
+                    a savings account, apply for a VISA® credit card, set 
+                    up a wire transfer or use various other services. Just fill 
+                    out and submit an application via our website or mail or fax it to the credit union. 
+                    It's fast and easy. We are also happy to send you any additional 
+                    information that you might want on our products and services. 
+                    Simply fill out a <%= mail_to "info@excelfcu.org?subject=More Info on Excel Products and Services&amp;body=Please send more information to the following address:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0AI would specifically like to know more about the following products and services:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0AYou may also contact me at the following phone number(s):%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A", "Send More Info", :onclick=>"javascript:return confirm('Please be advised that by sending us an email through the Contact Us link that your e-mail may not be secure.  DO NOT submit any personal information (For EX:  Social Security Number, Credit Card or Account Number) through this link.  If you have specific account inquiries, please use our secure email through NetBranch or call the credit union.  Simply, click on NetBranch Log in, input your account number and secure PIN number, and then click on Email Us.')" %> form online and send it to 
+                    us with a click of your mouse.</p>
+            <table width="95%" border="0" cellpadding="1" cellspacing="1">
+              <tr valign="top">
+                 <td><%= link_to image_tag("logo_getacrobat.gif", :alt=>"", :width=>88, :height=>31), "http://get.adobe.com/reader/", :rel=>"confirm external" %></td>
+                 <td>Adobe  Reader is required to view some Forms &amp; Applications. 
+                     Adobe Reader can be downloaded free of charge 
+                     by clicking <%= link_to "here", "http://get.adobe.com/reader/", :rel=>"confirm external" %>. </td>
+                </tr>
+            </table>
+    </div>
+    <div class="inxright clearfix">
+    <ul>
+    	<li><%= link_to "New Member", forms_new_member_path %></li>
+        <li><%= link_to "Scholarship Application", "pdf/2010 EXCEL Federal Credit Union Scholarship Application.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Savings Accounts", new_shareapp_path %></li>
+        <li><%= link_to "Checking Account", new_shareapp_path %></li>
+        <li><%= link_to "ATM/Debit Card", new_atmdebitcardapp_path, :rel=>"external" %></li>
+        <li><%= link_to "ATM Debit Card Opt In/Out", new_rege_path %></li>
+        <li><%= link_to "TotaLoan Application/Agreement", "pdf/TotaLoan.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Credit Card", new_ccdisclosure_path %></li>
+        <li><%= link_to "Auto Loan", new_loanapp_path %></li>
+        <li><%= link_to "Consumer Loan", new_loanapp_path %></li>
+        <li><%= link_to "Home Equity Line-of-Credit", new_helocagree_path %></li>
+        <li><%= link_to "First Mortgage Loan", "http://www.cufs.org", :rel=>"confirm external" %></li>
+        <li><%= link_to "Fixed Rate Second Mortgage", new_secmoragree_path %></li>
+        <li><%= link_to "IRAs", new_shareapp_path %></li>
+        <li><%= link_to "Money Market", new_shareapp_path %></li>
+        <li><%= link_to "Savings Certificate", new_shareapp_path %></li>
+        <li><%= link_to "Holiday Club", new_shareapp_path %></li>
+    </ul>
+    <p>&nbsp;</p>
+   </div>
+  </div>
+ </div>

@@ -1,0 +1,73 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Credit Card Disclosure </h2>
+	<% form_for(@ccdisclosure) do |f| %>
+		<%= f.error_messages %>
+			<p class="redtext2">You will need to acknowledge reading the information provided below before being directed to the application. Please check the box below and click on the "I Agree" button to proceed to the credit card application. </p>
+    		<p class="center">
+                <%= check_box("ccdisclosure", "agree_to_terms", {}, "yes", "no")%> I have read and agree to the terms and conditions provided below in the Credit Card Disclosure. <br /><br />
+                <%= f.submit 'I Agree' %><br /><br />
+			</p>		
+	<% end %>
+	<table border="1" cellpadding="0" cellspacing="0" class="visarates" id="center">
+                            <tr>
+                              <td>Type of VISA Card*</td>
+                              <td>Annual Percentage Rate **</td>
+                              <td>Annual Membership Fee</td>
+                              <td>Grace Period ***</td>
+                              <td>Method Used to Compute Finance Charges for Cash Advances ****</td>
+                              <td>Method Used to Compute Finance Charges for Purchases ****</td>
+                              <td>Late Payment Fee</td>
+                              <td>Over the Limit Fee</td>
+                              <td>Cash Advance Fee</td>
+                              <td>ScoreCard&reg; Rewards</td>
+</tr>
+                            <tr>
+                              <td>Platinum VISA</td>
+                              <td class="large">9.00%<br/></td>
+                              <td>NO Annual Fee</td>
+                              <td>25 Days</td>
+                              <td>Method A</td>
+                              <td>Method E</td>
+                              <td>$25.00</td>
+                              <td>$0.00</td>
+                              <td>$0.00</td>
+                              <td>Yes</td>
+                            </tr>
+                            <tr>
+                              <td>Gold VISA</td>
+                              <td class="large">12.00%</td>
+                              <td>NO Annual Fee</td>
+                              <td>25 Days</td>
+                              <td>Method A</td>
+                              <td>Method E</td>
+                              <td>$25.00</td>
+                              <td>$0.00</td>
+                              <td>$0.00</td>
+                              <td>Yes</td>
+                            </tr>
+                            <tr>
+                              <td>Classic VISA</td>
+                              <td class="large">16.50%</td>
+                              <td>$25.00 Annual Fee</td>
+                              <td>25 Days</td>
+                              <td>Method A</td>
+                              <td>Method E</td>
+                              <td>$25.00</td>
+                              <td>$0.00</td>
+                              <td>$0.00</td>
+                              <td>Yes</td>
+                            </tr>
+                          </table>
+                          
+                          <p class="disclaimer">*The type of VISA&reg; card issued is based on the applicant's credit score.</p>
+                          <p class="disclaimer">**Annual Percentage Rate. This rate is subject to change, at the discretion of credit union management and the board of directors, with 45 days notice.</p>
+                          <p class="disclaimer">*** Grace period applies to purchases only. There is no grace period for cash advances.</p>
+<p class="disclaimer">****Explanation of Methods Used to Compute Finance Charges for Cash Advances and Purchases: </p>
+                          <p class="disclaimer"><span class="bluetext bold">Method A</span> - Average Daily Balance (including current transactions). The <span class="bold">Finance Charge</span> on cash advances begins from the date you obtained the cash advance, or the first day of the billing cycle in which it is posted to your account, whichever is later. There is no grace period. The <span class="bold">Finance Charges</span> for a billing cycle are computed by applying the monthly Periodic Rate, which is the Annual Percentage Rate divided by 12 months, to the &quot;average daily balance&quot; of your account. To get the average daily balance, we take the beginning balance of your account each day, add any new purchases or cash advances, and subtract any payments, credits, non-accruing fees, and unpaid finance charges. This gives us the daily balance. Then we add up all the daily balances for the billing cycle and divide the total by the number of days in the billing cycle.
+</p>                          
+                          <p class="disclaimer"><span class="bluetext bold">Method E</span> - Average Daily Balance (excluding current transactions) - Purchases. To avoid incurring an additional <span class="bold">Finance Charge</span> on the balance of purchases reflected on your monthly statement, you must pay the New Balance shown on your monthly statement on or before the Payment Due Date. The grace period for New Balance of purchases extends to the payment due date. The <span class="bold">Finance Charges</span> for a billing cycle are computed by applying the monthly Periodic Rate, which is the annual percentage rate divided by 12 months, to the &quot;average daily balance&quot; of your account. To get the average daily balance, we take the beginning balance of your account each day, add any new purchases or cash advances, and subtract any payments, credits, non-accruing fees, and unpaid finance charges. This gives us the daily balance. Then we add up all the daily balances for the billing cycle and divide the total by the number of days in the billing cycle.</p>
+	</div>
+  </div>
+ </div>

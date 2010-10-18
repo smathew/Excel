@@ -1,0 +1,88 @@
+<h2>
+				EXCEL Federal Credit Union
+				<br />
+				What You Need to Know about Overdrafts and Overdraft Fees
+			</h2>
+			<p>
+				An <em>overdraft</em> occurs when you do not have enough money in your checking account to cover a transaction, but we pay it anyway.&nbsp; We can cover your overdrafts in two different ways:
+			</p>
+			<ol>
+				<li>We have <em>standard overdraft practices</em> that come with your checking account.</li>
+				<li>We also offer <em>overdraft protection plans</em>, such as a link to a savings account or line of credit, which may be less expensive than our standard overdraft practices.&nbsp; To learn more, ask us about these plans.</li>
+			</ol>
+			<p>
+				This notice explains our <em>standard overdraft practices</em>.
+			</p>
+			<dl class="regefaq">
+				<dt>What are the <em>standard overdraft practices</em> that come with my checking account?</dt>
+				<dd>
+					<p>
+						We <em>will consider</em> authorizing and paying overdrafts for the following types of transactions:
+					</p>
+					<ul>
+						<li>Checks and other transactions made using your checking account number</li>
+						<li>Automatic bill payments</li>
+					</ul>
+					<p>
+						We <em>will not</em> authorize or pay any overdrafts for the following types of transactions unless you ask us to (see below):
+					</p>
+					<ul>
+						<li>ATM Transactions</li>
+						<li>Everyday debit card transactions</li>
+					</ul>
+					<p>
+						We pay overdrafts at our discretion, which means <em>we do not guarantee</em> that we will always authorize and pay any type of transaction.
+					</p>
+					<p>
+						If we do <em>not</em> authorize and pay an overdraft, your transaction will be declined.
+					</p>
+				</dd>
+				<dt>What fees will I be charged if EXCEL Federal Credit Union pays my overdraft?</dt>
+				<dd>
+					<p>
+						Under our standard overdraft practices:
+					</p>
+					<ul>
+						<li>We will charge you a fee of $26.00 each time we pay an overdraft.</li>
+						<li>There is <em>no limit</em> on the total fees we can charge you for overdrawing your account.</li>
+					</ul>
+				</dd>
+				<dt>What if I want EXCEL Federal Credit Union to consider authorizing and paying overdrafts on my ATM and everyday debit card transactions?</dt>
+				<dd>
+					<p>
+						If you also want us to authorize and pay overdrafts on qualifying ATM and everyday debit card transactions, please complete the form below and provide the additional information requested.&nbsp; When you have completed the form, click the &quot;submit&quot; button.&nbsp; We will confirm your request by the next business day.
+					</p>
+				</dd>
+			</dl>
+			<hr />
+			<% form_for(@rege) do |f| %>
+				<%= f.error_messages %>
+				<fieldset>
+					<p>
+						<%= f.radio_button("authorize_pay_overdrafts", "optOut") %><label for="regeFoptOut">I <em>do not</em> want EXCEL Federal Credit Union to authorize and pay any overdrafts on my ATM and everyday debit card transactions.</label>
+						<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<%= check_box("rege", "not_linked_savings_account", {}, "yes", "no")%>This request also applies to my linked savings account. 
+						<br />
+						<br />
+						<%= f.radio_button("authorize_pay_overdrafts", "optIn") %><label for="regeFoptIn">I <em>do</em> want EXCEL Federal Credit Union to authorize and pay overdrafts on my qualifying ATM and everyday debit card transactions.</label>
+						<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<%= check_box("rege", "linked_to_savings_account", {}, "yes", "no")%>This request also applies to my linked savings account.
+					</p>
+					<dl class="formfields clearfix">
+						<dt><label for="regeFname">Name*:</label></dt>
+						<dd><%= f.text_field :name, :size=>40, :class=>"regetext" %></dd>
+						<dt><label for="regeFaccount">Account Number*:</label></dt>
+						<dd><%= f.text_field :account_number, :size=>10, :class=>"regetext" %></dd>
+						<dt><label for="regeFemail">Email Address:</label></dt>
+						<dd><%= f.text_field :email_address, :class=>"regetext", :size=>30 %></dd>
+						<dt><label for="regeFphone">Phone Number:</label></dt>
+						<dd><%= f.text_field :phone_number, :class=>"regetext", :size=>20, :maxlength => 12 %></dd>
+					</dl>
+					<p class="center">
+						<%= f.submit 'SUBMIT' %>
+					</p>
+				</fieldset>
+			<% end %>
+	</div>

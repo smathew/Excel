@@ -1,0 +1,25 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxleft">
+    <h2>Card Information</h2>
+    <p>Looking for a credit card or debit card that offers convenience and buying   power, low cost, and travel and merchandise rewards? Look no further. EXCEL   Federal Credit Union can help you establish a VISA&reg; Classic, VISA&reg; Gold or VISA&reg;   Platinum credit card account. We can also offer you a MasterCard&reg; debit card   that draws money directly from your checking account. <br />
+      <br />
+      Our debit and   credit cards also offer <%= link_to "ScoreCard&reg; Rewards", "https://www.scorecardrewards.com/general_logon.asp", :rel=>"confirm external" %>. For every dollar you spend and authorize   with your signature (not a PIN) you receive one reward point redeemable for   travel and merchandise. Qualifying reward points from EXCEL debit and credit   cards can be combined! Plus, members in the same household can combine their   points. Earn maximum rewards faster with EXCEL! <br />
+      <br />
+      Click on a link in the   menu to the right for more information about VISA&reg; credit cards and MasterCard&reg;   debit cards or apply for an EXCEL card now.</p>
+<p class="center"><%= image_tag "visaatm.jpg", :alt=>"", :width=>138, :height=>42, :class=>"middle" %><%= image_tag "mastercard.jpg", :alt=>"", :width=>180, :height=>123, :class=>"middle" %></p>
+    
+    </div>
+    <div class="inxright clearfix">
+    <ul>
+    	<li><%= link_to "Lost or Stolen Card", lost_path %></li>
+        <li><%= link_to "Credit Cards", loans_creditcard_path %></li>
+        <li><%= link_to "Debit Cards", checking_checkcard_path %></li>
+        <li><%= link_to "Credit Card Application", new_ccdisclosure_path %></li>
+        <li><%= link_to "Debit Card Application", new_atmdebitcardapp_path %></li>
+        <li><%= link_to "ScoreCard&reg; Rewards", scorecard_path %></li>
+        <li><%= link_to "Security for Online Purchases", loans_onlinepurchsec_path %></li>
+    </ul>
+    </div>
+  </div>
+ </div>

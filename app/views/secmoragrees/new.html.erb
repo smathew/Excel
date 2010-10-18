@@ -1,0 +1,23 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Fixed Rate Second Mortgage</h2>
+	  <% form_for(@secmoragree) do |f| %>
+		<%= f.error_messages %>
+		<p class="redtext2">You will need to acknowledge reading the information provided below before being directed to the application.</p>
+    	<p class="center">
+			<%= check_box("secmoragree", "accept", {}, "yes", "no")%>
+			I have read/received the brochure <span class="bold">"Putting Your Home on the Loan Line is Risky Business".</span>
+
+ <br /><br /><span class="bold"><%= link_to "Click here for brochure", "pdf/Fixed 2nd Mtg Brochure.pdf", :rel=>"external" %></span><br /><br /><%= link_to image_tag("get_adobe_reader.gif", :alt=>""), "http://www.adobe.com/go/getreader/", :rel=>"confirm external" %><br /><br />
+ 
+		<%= f.submit 'I Agree' %>
+		<br /><br />
+    </p>
+	<p>The HMDA data about our residential mortgage lending are available for review. The data shows the geographic distribution of loans and applications; The race, gender, and income of applicants and borrowers; and information about loan approvals and denials. Inquire at any office regarding the locations where HMDA data may be inspected.  </p>
+    <p class="center"><%= image_tag "equal_housecomp.jpg", :alt=>"" %></p>
+		
+	  <% end %>
+	</div>
+  </div>
+ </div>

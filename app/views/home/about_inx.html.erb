@@ -1,0 +1,33 @@
+<div class="clearfix">
+		<div class="inxleft">
+			<h2>About Us</h2>
+			<p>EXCEL Federal Credit Union provides members and businesses with exceptional financial services, including low-cost loans and competitively priced deposit accounts, plus all the convenience and access expected of a full-service financial institution.</p>
+			<p>Lending and operating decisions are made locally to ensure personalized service and the immediate attention you may not find in other financial institutions. </p>
+			<p>Chartered in 1952, EXCEL began offering financial services to employees of the federal government. Over the years, EXCEL has grown to include 450 additional Atlanta area companies and organizations, ranging in size from 2 associates to over 1,000. </p>
+			<p>Along with competitive products and services, and our knowledgeable and helpful employees, we also provide members the latest financial news, access to financial literacy programs and membership in a financial institution that works for members, not for profit.</p>
+			<p>EXCEL has an excellent rating by Bauer&#39;s Financial Reports - a nationally recognized rating service for credit unions and banks - and is regulated by the National Credit Union Administration (NCUA), an agency of the U.S. government. Deposits in EXCEL are insured up to at least $250,000 and backed by the full faith and credit of the United States Government. </p>
+			
+			<h2>Anyone Can Join!</h2>
+			<p>Anyone who wants to get ahead financially can join our credit union! </p>
+			<p>Once you join, you and your immediate family members who join have a lifetime membership, even if you change jobs or move; as long as your account remains open. </p>
+			<p>To become a member, simply complete a <%= link_to "membership application", new_membershipagree_path %> and fax it, along with the required picture IDs, to 770-582-3877.</p>
+			<%= image_tag "about_inx.jpg", :alt=>"About Us", :class=>"centerblock" %>
+			
+		</div>
+		<div class="inxright">
+			<ul>
+				<li><%= link_to "What's So Special About a Credit Union?", whoweare_path %></li>
+				<li><%= link_to "Becoming a Member", forms_new_member_path %></li>
+				<li><%= link_to "Contact Us", contact_path %></li>
+				<li>Routing Number 261071548</li>
+				<li><%= link_to "ATM Locations", atmlocations_path %></li>
+				<li><%= link_to "Branch Locations/Hours", locations_path %></li>
+				<li><%= link_to "Approved Member Groups", member_groups_path %></li>
+				<li><%= link_to "Newsletter", newsletter_inx_path %></li>
+				<li><%= link_to "FAQs", faqs_path %></li>
+				<li><%= link_to "Holiday Schedule", holidaysched_path %></li>
+				<li><%= link_to "Federally Insured by NCUA", insuredbyncua_path %></li>
+			</ul>
+			<%= link_to image_tag("joinnow.jpg", :alt=>""), "pdf/membership.pdf", :rel=>"external" %>
+		</div>
+	</div>

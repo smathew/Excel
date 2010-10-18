@@ -1,0 +1,22 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Membership Agreement</h2>
+		<% form_for(@membershipagree) do |f| %>
+		<%= f.error_messages %>
+    
+		<p class="redtext2">You will need to acknowledge reading the information provided below before being directed to the application. Please check the box below and click on the “I Agree” button to proceed to the application.</p>
+		<p class="bluetext bold">Please print the application and submit via fax or mail, along with the requested information.</p>
+    	<p class="center">
+			<%= check_box("membershipagree", "agree", {}, "yes", "no")%>
+			 I have read and agree to the terms and conditions provided in the <%= link_to "Membership Agreement", "/pdf/membershipagreement.pdf", :rel=>"external" %> and acknowledge receipt of the credit union <%= link_to "Disclosures", "/pdf/disclosures.pdf", :rel=>"external" %> and <%= link_to "Privacy Policy", "/pdf/Privacy Policy Oct 2010.pdf", :rel=>"external" %>.<br /><br />
+	 
+			<%= f.submit 'I Agree' %>
+			<br /><br />
+		</p>
+                    
+	<% end %>
+    </div>
+  </div>
+ </div>
+

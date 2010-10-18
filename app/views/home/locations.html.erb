@@ -1,0 +1,66 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Branch Locations &amp; Hours</h2>
+    <table id="center" width="90%">
+      <tr>
+    <td valign="top" class="left">
+    <p><span class="bold">Main Office</span><br />
+    5070 Peachtree Industrial Blvd.<br />
+    Norcross, Georgia 30071<br />
+    770-441-9235
+    <br />
+    Hours of Operation: Monday - Friday 9am-4pm<br />
+    Services: Full service location<br />
+    <span class="bluetext">Fax: 770-582-3877</span><br />
+      <span class="bold">Drive-thru Windows<br />
+      Drive-thru ATM</span><br />
+    </p>
+    
+    <p><span class="bold">Atlanta Federal Center</span><br />
+    61 Forsyth Street, Suite 8B-71<br />
+    Atlanta, Georgia 30303
+    <br />
+    Hours of Operation: Monday - Friday 9am-4pm<br />
+    770-441-9235<br />
+    Services: Full service location<br />
+    <span class="bluetext">Fax: 404-524-3556</span><br />
+    <span class="bold">Walk-up ATM</span></p>
+    <p class="bold">24-Hour Account Service through:</p>
+    <ul>
+      <li><%= link_to "MoneyLine", phone_path %>: our 24-Hour Automated Response System<br />
+        770-441-9235<br />
+        1-888-441-9235</li>
+      <li><%= link_to "NetBranch", netbranch_path %>: our online banking system</li>
+    </ul>
+    
+    <p>&nbsp;</p></td>
+    <td valign="top" class="left">
+    <p><span class="bold">Midtown Location</span><br />
+1718 Peachtree Road, N.W.<br />
+Atlanta, Georgia 30309<br />
+Hours of Operation: Monday - Friday 9am-4pm<br />
+770-441-9235<br />
+Services: Full service location<br />
+<span class="bluetext">Fax: 404-881-9806</span><br />
+<span class="bold">ATM at location</span> </p>
+    <p>The Summit Building<br />
+      401 W. Peachtree Street<br />
+      Suite 250<br />
+      Atlanta, Georgia 30308<br />
+      Hours of Operation: Monday - Friday 9am-4pm<br />
+      770-441-9235<br />
+      Services: Full service location<br />
+      <span class="bluetext">Fax: 404-525-7461</span><br />
+      <span class="bold">ATM at location</span></p>
+    <p class="bold">Free <%= link_to "ATM Service", atmlocations_path %> at EXCEL ATM's or local area Publix PRESTO!</p>
+    <p>Click below for PRESTO! locations. Click <%= link_to "here", atmlocations_path %> for more information about our ATM services. </p>
+    <p class="bold center"> <%= link_to image_tag("prestologo.gif", :alt=>"", :width=>161, :height=>62), "http://store.publix.com/publix/", :rel=>"confirm external" %>    <br />
+      <%= image_tag "presto.jpg", :alt=>"", :width=>182, :height=>321 %>    </p></td>
+  </tr>
+</table>
+
+<p class="center"><%= link_to "View Contact Information", contact_path %></p>
+		</div>
+    </div>
+ </div>

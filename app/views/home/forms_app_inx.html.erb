@@ -1,0 +1,35 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxleft">
+    <h2>Forms</h2>
+    <p>At EXCEL, we make it easy for you to open a savings account, apply for a VISA&reg; credit card, set up a wire transfer or use various other services. Just fill out and submit an application via our website or mail or fax it to the credit union. It's fast and easy. We are also happy to talk with you and answer any additional questions you may have regarding our products and services. Please call 770-441-9235 if you need additional assistance.</p>
+            <table width="95%" border="0" cellpadding="1" cellspacing="1">
+              <tr valign="top">
+                 <td><%= link_to image_tag("logo_getacrobat.gif", :alt=>"", :width=>88, :height=>31), "http://get.adobe.com/reader/", :rel=>"confirm external" %></td>
+                 <td>Adobe  Reader is required to view some Forms &amp; Applications. 
+                     Adobe Reader can be downloaded free of charge 
+                     by clicking <%= link_to "here", "http://get.adobe.com/reader/", :rel=>"confirm external" %>.</td>
+                </tr>
+            </table>
+    
+    </div>
+    <div class="inxright clearfix">
+    <ul>
+    	<li><%= link_to "Deposit Ticket", "pdf/DepositTicket.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Address Change Form", "pdf/change_address.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Checking Account Switch Kit", checking_switch_path %></li>
+        <li><%= link_to "Credit Card Balance Transfer", "pdf/Balance Transfers Form.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Direct Deposit Add/Change", "pdf/ddchange.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Password Request", new_pinrequest_path %></li>
+        <li><%= link_to "Deposit Allocation Form", "pdf/Direct Deposit  Payroll Allocation Form.pdf", :rel=>"external" %></li>
+        <li><%= link_to "TotaLoan Application/Agreement", "pdf/TotaLoan.pdf", :rel=>"external" %></li>
+        <li><%= link_to "Wire Transfer Request", "pdf/MEMBERWIREOUT.pdf", :rel=>"external" %></li>
+        <li><%= link_to "ACH Affidavit", "pdf/achaffidavit.doc", :rel=>"external" %></li>
+        <li><%= link_to "ACH Stop Payment Request", "pdf/stoppayment.pdf", :rel=>"external" %></li>
+
+    </ul>
+    <p>&nbsp;</p>
+
+    </div>
+  </div>
+ </div>

@@ -1,0 +1,32 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Go Green With Online Statement Viewing</h2>
+    <%= image_tag "tree.gif", :alt=>"", :width=>142, :height=>211, :class=>"fleft image" %>
+    <p>The small choices we make every day add up to a greener future - and if that's not enough - making eco-friendly choices can actually save you money.</p>
+<p>Viewing your statements online conserves paper, trees and the fuel that would've been used to deliver a paper statement.</p>
+    <p>You can also increase your level of protection from identity theft by viewing your statements online instead of receiving them through the mail. Plus, you reduce the amount of paper clutter and confidential information being delivered to your public mailbox!</p>
+    <p>To view your statements online, logon to <%= link_to "NetBranch Online Banking", netbranch_path %> using your account number and password. If you don’t have your account number and password, submit a <%= link_to "Password Request", new_pinrequest_path %> now. We’ll contact you by the next business day and get you started in no time.</p>
+    <p>&nbsp;</p>
+    <%= image_tag "mail.gif", :alt=>"", :width=>88, :height=>149, :class=>"fright image" %>
+	<div class="indent">
+    <p>eStatement features:</p>
+    <ul>
+    	<li>Accessible through NetBranch, our secure online banking portal, by clicking on<br />the &quot;Online Statements&quot; tab</li>
+        <li>Includes periodic e-mail reminders when your statements are ready for viewing</li>
+        <li>Includes the same information (and looks the same) as a paper statement</li>
+        <li>Provides the ability to access up to 24 months of account statements online</li>
+        <li>Allows you to view, print and save your statements as necessary</li>
+    </ul>
+    </div>
+    
+    <p>Need help getting started or have more questions? Contact members services at 770-441-9235 or <br />1-888-441-9235 between 9AM and 4PM each business day, or <%= mail_to "info@excelfcu.org?subject=eStatements&amp;body=Please sign me up for eStatements.  The name, street address, and telephone number(s) on the account are listed below:
+%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A
+Please begin sending eStatement messages to the following email address:
+%0D%0A%0D%0A%0D%0A
+I can be reached during the day at the following number(s):
+%0D%0A%0D%0A%0D%0A
+I understand that only the account owner or joint account owner can request this change, and that EXCEL Federal Credit Union will contact me to verify this information and account ownership before making this change. ", "send us an email", :onclick=>"javascript:return confirm('Please be advised that by sending us an email via this link that your email may not be secure. Do not submit any confidential information through this link (for example your social security, credit card or account number). If you have specific account inquiries that require you to send us confidential information, please use our secure email by logging onto NetBranch Online Banking using your account number and password, or call the credit union at 770-441-9235 or 1-888-441-9235 for further assistance. Thank you.')" %> and we’ll respond to your email no later than the next business day!</p>
+    </div>
+  </div>
+ </div>

@@ -1,0 +1,25 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxleft">
+    <h2>Checking Accounts</h2>
+    <p>EXCEL offers checking account plans to fit different needs. The overall benefits   of checking with EXCEL include FREE ATM service, 24-hour telephone response   access to your account through <%= link_to "MoneyLine", phone_path %>,   anytime online banking through <%= link_to "NetBranch", netbranch_path %>, and a no-fee <%= link_to "Debit Card", checking_checkcard_path %> that offers <%= link_to "ScoreCard® Rewards", "https://www.scorecardrewards.com/general_logon.asp", :rel=>"confirm external" %>. For every dollar you spend with your EXCEL debit card and authorize with your signature you'll earn one reward point redeemable for travel and merchandise.  Plus, you can combine your EXCEL debit and credit card points. Not all financial institutions offer this many rewards. For more information on these and other features, or an application to open an account, please click on a link in the menu to the right.</p>
+<p class="center"><%= image_tag "checking_inx.jpg", :alt=>"", :width=>275, :height=>115 %></p>
+    
+    </div>
+    <div class="inxright clearfix">
+    <ul>
+    	<li><%= link_to "Checking Accounts", checking_accts_path %></li>
+        <li><%= link_to "CU Succeed Teen Checking (ages 13-17)", teen_path %></li>
+        <li><%= link_to "Young Adults (ages 18-24)", savings_youngadults_path %></li>
+        <li><%= link_to "Debit/Check Cards", checking_checkcard_path %></li>
+        <li><%= link_to "Overdraft Protection/ECP", checking_overdraft_path %></li>
+        <li><%= link_to "Account Switch Kit", checking_switch_path %></li>
+        <li><%= link_to "Check Ordering", "https://www.deluxe-check-order.com/ReorderHome.jsp?url=www.excelfcu.org", :rel=>"confirm external" %></li>
+        <li><%= link_to "Lost/Stolen Card", lost_path %></li>
+        <li><%= link_to "Stop Payment Form", "pdf/Stop Pay Request.pdf" %></li>
+        <li><%= link_to "Direct Deposit", savings_directdeposit_path %></li>
+        <li><%= link_to "Payroll Allocation", savings_payroll_path %></li>
+    </ul>
+    </div>
+  </div>
+ </div>

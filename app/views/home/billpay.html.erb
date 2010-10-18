@@ -1,0 +1,17 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter">
+    <h2>Bill Pay Service</h2>
+    <p>If you find the thought of paying bills online intimidating, you're not alone. Moving from paying bills the old fashioned paper way to the new automated internet may seem daunting, but when you talk to someone who's made the switch, you'll hear how easy it is - Bill Pay is the best way!</p>
+    <p>The Bill Pay Service is accessed through <%= link_to "Net Branch",  netbranch_path %>, our online banking system.</p>
+    <p>To access NetBranch, you'll need a password (which is the same as your MoneyLine automated phone system password). If you don't have a password, submit a <%= link_to "password request", new_pinrequest_path %> or contact member services at (770) 441-9235 or 1-888-441-9235. </p>
+    <p>You will also need an EXCEL checking account. If you don't have a checking account, review our <%= link_to "checking account options", checking_accts_path %> and submit an online <%= link_to "checking account application", new_shareapp_path %>.</p>
+    <p>Once you have your password and EXCEL checking account number ready, log in to NetBranch and select &quot;Pay Bills&quot; on the left-hand side of the screen. At this point, the system will require you to &quot;apply&quot; and accept the &quot;terms and conditions of use&quot; before being able to pay your bills online for the first time. You should receive approval by the next business day, provided you have an EXCEL checking account in good standing. </p>
+    <p>After that, simply set up your payees and you're good to go – forget about buying stamps or checks!</p>
+    <p>The bill pay system will prompt you to input the necessary payment information. Often times, the system recognizes your payees based on the name, telephone number or address you provide and automatically inserts the data for you. Once you've entered a new payee, their information is stored for future use. The next time you need to authorize a payment to the same payee, there is no need to enter the data again – just select the payee from the list you've already created! </p>
+    <p>You can choose to make a one-time payment, or the system can make weekly, monthly, or quarterly automated payments based on your directions. The funds come directly from your checking account and payment is made within 3 to 8 business days from the date of authorization. </p>
+    <p>Please contact member services if you have questions, or view our <%= link_to "Bill Pay Video", "http://www.clickvue.com/bp/excel0819.html", :rel=>"external" %> for more information. </p>
+    <p class="center"><%= link_to image_tag("billpay.gif", :alt=>"Bill Pay Video", :width=>180, :height=>150), "http://www.clickvue.com/bp/excel0819.html", :rel=>"external" %></p>
+    </div>
+  </div>
+ </div>

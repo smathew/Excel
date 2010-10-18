@@ -1,0 +1,136 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxcenter">
+    <h2>Products</h2>
+    <table width="535" border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" class="tableheadinginx bgcolor"><%= link_to "Savings Accounts", savings_inx_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Regular Savings", savings_regular_path %></td>
+    <td class="tablecell"><%= link_to "YOU NAME IT! Savings Account", products_younameit_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Kids Club (ages 12 &amp; younger)", savings_kids_path %></td>
+    <td class="tablecell"><%= link_to "Savings Certificate", savings_certificates_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "CU Succeed Teen Savings (ages 13-17)", teen_path %></td>
+    <td class="tablecell"><%= link_to "Individual Retirement Accounts", savings_ira_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Young Adults (ages 18-24)", savings_youngadults_path %></td>
+    <td class="tablecell"><%= link_to "Money Market Accounts", savings_moneymarket_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Holiday Club Accounts", savings_club_path %></td>
+    <td class="tablecell"><%= link_to "Payroll Allocation", savings_payroll_path %></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td class="tablecell"><%= link_to "Direct Deposit", savings_directdeposit_path %></td>
+  </tr>
+</table>
+
+    <table width="535" border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" class="tableheadinginx bgcolor"><%= link_to "Checking", checking_inx_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Checking Accounts", checking_accts_path %></td>
+    <td class="tablecell"><%= link_to "Check Ordering", "https://www.deluxe-check-order.com/ReorderHome.jsp?url=www.excelfcu.org", :rel=>"confirm external" %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "CU Succeed Teen Checking (ages 13-17)", teen_path %></td>
+    <td class="tablecell"><%= link_to "Lost or Stolen Check Card", lost_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Young Adults (ages 18-24)", savings_youngadults_path %></td>
+    <td class="tablecell"><%= link_to "Stop Payment Form", "pdf/Stop Pay Request.pdf" %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Debit/Check Cards", checking_checkcard_path %></td>
+    <td class="tablecell"><%= link_to "Direct Deposit", savings_directdeposit_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to Overdraft Protection/ECP", checking_overdraft_path %></td>
+    <td class="tablecell"><%= link_to "Payroll Allocation", savings_payroll_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Account Switch Kit", checking_switch_path %></td>
+    <td class="tablecell">&nbsp;</td>
+  </tr>
+</table>
+
+    <table width="535" border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" class="tableheadinginx bgcolor"><%= link_to "Loans", loans_inx_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Auto Loans", loans_auto_path %></td>
+    <td class="tablecell"><%= link_to "Other Loans", loans_other_path,  :rel=>"confirm external" %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Credit Cards", loans_creditcard_path %></td>
+    <td class="tablecell"><%= link_to "Signature Loans", loans_signature_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Business Loans", business_loans_path %></td>
+    <td class="tablecell"><%= link_to "Secured Loans", loans_sharesecured_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "First Mortgage Loans", loans_mortgages_path %></td>
+    <td class="tablecell"><%= link_to "Loan Rates", rates_loan_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Second Mortgage Loans", loans_second_mortgages_path %></td>
+    <td class="tablecell"><%= link_to "Loan Application", new_loanapp_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Student Loans", loans_studentloans_path %></td>
+    <td class="tablecell"><%= link_to "Financial Calculators", calculators_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Home Equity Line of Credit", loans_homeequity_path %></td>
+    <td class="tablecell">&nbsp;</td>
+  </tr>  
+  
+</table>
+
+    <table width="535" border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="3" class="tableheadinginx bgcolor"><%= link_to "Card Information", card_inx_path %></td>
+  </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Credit Cards", loans_creditcard_path %></td>
+    <td colspan="2" rowspan="6" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center"><%= image_tag "logo_verified.gif", :alt=>"", :width=>115, :height=>70 %></td>
+        <td><%= link_to "Credit Card Registration", "https://usa.visa.com/personal/security/vbv/index.html?it=searchQuicklink", :rel=>"confirm external" %></td>
+      </tr>
+      <tr>
+        <td align="center"><%= image_tag "logo_mastercard.gif", :alt=>"", :width=>115, :height=>50 %></td>
+        <td><%= link_to "Debit Card Registration", "https://secure4.arcot.com/vpas/ICPT0567_mc/enroll/index.jsp?locale=en_US&amp;bankid=3251", :rel=>"confirm external" %></td>
+      </tr>
+    </table></td>
+    </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Debit Cards", checking_checkcard_path %></td>
+    </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Card Account Information", "https://www.ezcardinfo.com/", :rel=>"confirm external" %></td>
+    </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Credit Card Application", new_ccdisclosure_path %></td>
+    </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Debit Card Application", new_atmdebitcardapp_path %></td>
+    </tr>
+  <tr>
+    <td class="tablecell"><%= link_to "Lost/Stolen Card", lost_path %></td>
+    </tr>  
+  
+</table>
+	</div>
+  </div>
+ </div>

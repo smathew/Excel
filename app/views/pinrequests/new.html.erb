@@ -1,0 +1,34 @@
+<div id="container2">
+  <div class="banner">
+   	<div id="forms">
+	<% form_for(@pinrequest) do |f| %>
+		<%= f.error_messages %>
+		<h2>Password Request</h2>
+			   <p>This password is used to access <%= link_to "NetBranch", netbranch_path %> Online Banking, <%= link_to "MoneyLine", phone_path %> Automated Phone Service and our new <%= link_to "Mobile Banking Service", mobilebanking_path %> at "mb.excelfcu.org". This is not a request for a debit or ATM card PIN (Personal Identification Number). </p>
+		<table>
+		  <tr>
+			<td><label for="appName">Name<span class="red">*</span></label><br /><%= f.text_field :name, :size=>35 %></td>
+			<td><label for="appAcct">Account Number<span class="red">*</span></label><%= f.text_field :account_number, :size=>35 %></td>
+		  </tr>
+		  <tr>
+			<td><label for="appPhone">Daytime Phone Number<span class="red">*</span></label><%= f.text_field :phone_number, :size=>35 %></td>
+			<td><label for="appEmail">Email<span class="red">*</span></label><br /><%= f.text_field :email_address, :size=>35 %></td>
+		  </tr>
+		  <tr class="borderbottom">
+			<td class="center small" colspan="2"><label for="pinrequest"><span class="bold">Was your Password lost or stolen?</span></label><br />
+				<%= f.radio_button("reason_for_request", "Lost/Forgotten", :class=>"radio") %>Lost / Forgotten<br />
+				<%= f.radio_button("reason_for_request", "Stolen", :class=>"radio") %>Stolen<br />
+				<%= f.radio_button("reason_for_request", "Never had a Password", :class=>"radio") %>Never had a Password</td>
+		  </tr>
+		  <tr>
+			<td colspan="3" class="small"><p><span class="bold">NOTE:</span>You will be contacted no later than the next business day regarding your password request.  Thank You.</p></td>
+		  </tr>		  
+		  <tr>
+			<td colspan="3" class="center"><%= f.submit 'Submit Application', :class=>"submit" %></td>
+		  </tr>
+		</table>
+	 <% end %>
+	</div>
+ </div>
+</div>
+

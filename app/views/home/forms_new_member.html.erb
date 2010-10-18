@@ -1,0 +1,51 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="contentcenter clearfix">
+		<h2>New Member Application Process</h2>
+        <p>
+        To join our credit union, complete a <%= link_to "Membership Application", new_membershipagree_path %> and fax the completed application, along with a copy of your license and any co-signers on the account, to 770-582-3877. For kids and teen club accounts (ages 17 and younger), complete a <%= link_to "Youth Club Account &amp; Membership Application", "pdf/EXCE_FCU_Youth_MEM_APP.pdf", :rel=>"external" %>.</p>
+        
+		<p>
+			A $5 membership fee and a $5 opening deposit into a   savings account is required to become
+			a member of our credit union.&nbsp; Once we receive your Membership Application and assign
+			you an account number, we will contact you with that information.&nbsp; At that time, we
+			will also make arrangements regarding receipt of the membership fee and opening deposit.&nbsp;
+			The membership fee and opening deposit can be delivered or mailed to one of our branch
+			locations, or we can deduct the amount from your first incoming direct deposit.&nbsp; To
+			establish direct deposit, complete a <%= link_to "Direct Deposit Form", "pdf/ddchange.pdf", :rel=>"external" %> and submit it to your employer and/or depositing institution.
+		</p>
+		<p>
+			You will need to open more than one account or maintain a $100 minimum daily balance in your
+			EXCEL savings account in order to avoid the $2 minimum balance fee.&nbsp; To have us disperse
+			your incoming direct deposit amongst multiple accounts, be sure to complete Section 5 of the
+			<%= link_to "Membership Application", new_membershipagree_path,  :rel=>"external" %>, entitled &quot;Accounts
+			and Amounts.&quot; Some of our most popular accounts include the Holiday Savings Account and our
+			Simply Checking Account!
+		</p>
+		<p>
+			Once you join, you and your immediate family members who join have a lifetime membership, even
+			if you change jobs or move, as long as your account remains open.
+		</p>
+  			<p class="graybox">
+			<small>
+				To help the government fight the funding of terrorism and money laundering activities, Federal
+				law requires all financial institutions to obtain, verify and record information that identifies
+				each person who opens an account.&nbsp; What this means to you: When you open an account with
+				EXCEL Federal Credit Union, we will ask for your name, address, date of birth and other
+				information that will allow us to identify you.&nbsp; We may ask to see a copy of your driver&#39;'s
+				license or other identifying documents.&nbsp; These practices also help in our ongoing efforts
+				to protect your identity and your accounts.
+			</small>
+		</p>
+        
+		<div class="clearfix">
+			<div class="split50">
+				<%= link_to image_tag("joinnow.jpg", :alt=>"Join Now!", :class=>"centerblock"), new_membershipagree_path %>
+			</div>
+			<div class="split50">
+				<%= image_tag "group.jpg", :alt=>"Group", :class=>"centerblock" %>
+			</div>
+  </div>
+    </div>
+  </div>
+</div>

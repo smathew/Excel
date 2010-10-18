@@ -1,0 +1,20 @@
+<div id="container2">
+  <div class="banner">
+  	<div class="inxleft">
+    <h3>Rates</h3>
+    <p>Our main goal is to keep loan rates and fees lower, and savings rates higher, than other financial institutions, while at the same time keeping our credit union viable.</p>
+    <p>On occasion, we offer special promotional rates on loans and deposit accounts that may not be reflected in our regular, everyday rates listed here on our site. </p>
+    <p>To see what loan rate you qualify for or to inquire about our limited-time offers, or to determine the best savings account for you, speak with member services at 770-441-9235 or call 1-800-441-9235. You can also submit an inquiry via email at <%= mail_to "info@excelfcu.org", "info@excelfcu.org", :subject => "Contact from Website", :onclick=>"javascript: return confirm('Please be advised that by sending us an email via this link that your email may not be secure. Do not submit any confidential information through this link (for example your social security, credit card or account number). If you have specific account inquiries that require you to send us confidential information, please use our secure email by logging onto NetBranch Online Banking using your account number and password, or call the credit union at 770-441-9235 or 1-888-441-9235 for further assistance. Thank you.')" %>. We will respond to your request no later than the next business day.</p>
+    </div>
+    <div class="inxright clearfix">
+    <ul>
+    	<li><%= link_to "Savings Rates", rates_share_path %></li>
+        <li><%= link_to "Business Loan Rates", rates_loan_business_path %></li>
+        <li><%= link_to "Consumer Loan Rates", rates_loan_consumer_path %></li>
+       
+    </ul>
+    
+    <p class="center"><%= image_tag "business_inx.jpg", :alt=>"", :width=>183, :height=>183 %></p>
+    </div>
+  </div>
+ </div>

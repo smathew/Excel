@@ -1,0 +1,56 @@
+/* TOP LEVEL MENUS */
+ul#menu {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul#menu li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+ul#menu li a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+/* 2ND LEVEL AND ABOVE */
+ul#menu li ul {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	z-index: 2;
+	left: -999em;
+}
+
+ul#menu li ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+ul#menu li ul li a {
+	white-space: nowrap;
+}
+
+ul#menu li:hover ul, ul#menu li.sfhover ul {
+	left: auto;
+}
+
+/* 3RD LEVEL */
+ul#menu li:hover ul ul, ul#menu li.sfhover ul ul {
+	left: -999em;
+}
+
+ul#menu li:hover ul ul ul, ul#menu li.sfhover ul ul ul {
+	left: -999em;
+}
+
+ul#menu li li:hover ul, ul#menu li li.sfhover ul {
+	left: 0;
+	top: 0;
+	margin-top: 0;
+	margin-left: 100%;
+}

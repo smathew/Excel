@@ -1,0 +1,130 @@
+<div id="container2">
+  <div class="banner">
+    <div id="forms">
+		<% form_for(@shareapp) do |f| %>
+			<%= f.error_messages %>
+			<p>You must be a member of Excel Federal Credit Union in order to apply for these accounts. If you are not currently a member, please <%= link_to "click here", forms_new_member_path %> to learn how to join.  If you are already a member of EFCU, please provide all of the requested information below and submit for review.  We will respond to your request promptly.</p>
+			<p class="bold">Important information about procedures for opening a new account: </p>
+			<p class="bold">To help the government fight the funding of terrorism and money laundering activities, Federal law requires all financial institutions to obtain, verify and record information that identifies each person who opens an account. </p>
+			<p class="bold">What this means for you: When you open an account, we will ask for your name, address, date of birth, and other information that will allow us to identify you. We may ask to see your driver's license or other identifying documents. </p>
+			<p class="bold">These practices also help us in our ongoing efforts to protect your identity. </p>
+			<table>
+			  <tr>
+				<th scope="col" colspan="3">Account Application</th>
+			  </tr>
+			  <tr class="borderbottom">
+				<td colspan="3" class="center">
+						  <label for="shareType">Account Type:<span class="red">*</span> </label><%= f.select( :account_type,
+						{ "Simply Checking Account" => "Simply Checking Account", 
+						  "Platinum Checking Account" => "Platinum Checking Account", 
+						  "Kids Club (ages 12 and younger)" => "Kids Club (ages 12 and younger)", 
+						  "CU Succeed Teen Club (ages 13-17)" => "CU Succeed Teen Club (ages 13-17)", 
+						  "Young Adults (ages 18-24)" => "Young Adults (ages 18-24)", 
+						  "Money Market Account (minimum deposit $1000)" => "Money Market Account",
+						  "Holiday Club Account" => "Holiday Club Account", 
+						  "YOU name IT! Savings Account" => "YOU name IT! Savings Account", 
+						  "IRA Account (Traditional)" => "IRA Account (Traditional)", 
+						  "IRA Account (Roth)" => "IRA Account (Roth)", 
+						  "IRA Account (Educational)" => "IRA Account (Educational)", 
+						  "Term Savings Certificate" => "Term Savings Certificate"
+						 }) %>
+				</td>
+			  </tr>
+			  <tr>
+				<th scope="row" colspan="3">Applicant Information:</th>
+			  </tr>
+			  <tr>
+				<td><label for="appName">Name<span class="red">*</span></label><%= f.text_field :name %></td>
+				<td><label for="appAcct">Account Number (if available)</label><%= f.text_field :account_number, :maxlength=> 19 %></td>
+				<td><label for="appSSN">Social Security No.<span class="red">*</span></label><%= f.text_field :ssn, :maxlength=> 11 %></td>
+			  </tr>
+			  <tr>
+				<td colspan="2"><label for="appAddr">Address<span class="red">*</span></label><%= f.text_field :address %></td>
+				<td><label for="appBirthdate">Birthdate (MM/DD/YYYY)<span class="red">*</span></label><%= f.text_field :date_of_birth %></td>
+			  </tr>
+			  <tr>
+				<td><label for="appCity">City<span class="red">*</span></label><%= f.text_field :city %></td>
+				<td><label for="appState">State<span class="red">*</span></label><%= f.select( :state,
+						{ "Alabama" => "AL", 
+						  "Alaska" => "AK", 
+						  "Arizona" => "AZ", 
+						  "Arkansas" => "AR", 
+						  "California" => "CA", 
+						  "Colorado" => "CO",
+						  "Connecticut" => "CT", 
+						  "Delaware" => "DE", 
+						  "District Of Columbia" => "DC", 
+						  "Florida" => "FL", 
+						  "Georgia" => "GA", 
+						  "Hawaii" => "HI",
+						  "Idaho" => "ID", 
+						  "Illinois" => "IL", 
+						  "Indiana" => "IN", 
+						  "Iowa" => "IO", 
+						  "Kansas" => "KS", 
+						  "Kentucky" => "KY",
+						  "Louisiana" => "LA", 
+						  "Maine" => "ME", 
+						  "Maryland" => "MD", 
+						  "Massachusetts" => "MA", 
+						  "Michigan" => "MI", 
+						  "Minnesota" => "MN",
+						  "Mississippi" => "MS", 
+						  "Missouri" => "MO", 
+						  "Montana" => "MT", 
+						  "Nebraska" => "NE", 
+						  "Nevada" => "NV", 
+						  "New Hampshire" => "NH",
+						  "New Jersey" => "NJ", 
+						  "New Mexico" => "NM", 
+						  "New York" => "NY", 
+						  "North Carolina" => "NC", 
+						  "North Dakota" => "ND", 
+						  "Ohio" => "OH",
+						  "Oklahoma" => "OK", 
+						  "Oregon" => "OR", 
+						  "Pennsylvania" => "PA", 
+						  "Rhode Island" => "RI", 
+						  "South Carolina" => "SC", 
+						  "South Dakota" => "SD",
+						  "Tennessee" => "TN", 
+						  "Texas" => "TX", 
+						  "Utah" => "UT", 
+						  "Vermont" => "VT", 
+						  "Virginia" => "VA", 
+						  "Washington" => "WA",
+						  "West Virginia" => "WV",
+						  "Wisconsin" => "WI",
+						  "Wyoming" => "WY"
+						 }) %>
+						  </td>
+				<td><label for="appZip">Zip<span class="red">*</span></label><br /><%= f.text_field :zip, :size=>10, :maxlength=>5 %></td>
+			  </tr>
+			  <tr class="borderbottom">
+				<td><label for="appHomePhone">Home Phone(XXX-XXX-XXXX)</label><%= f.text_field :home_phone, :maxlength=> 12 %></td>
+				<td><label for="appWorkPhone">Work Phone(XXX-XXX-XXXX)</label><%= f.text_field :work_phone, :maxlength=> 12 %></td>
+				<td><label for="appEmail">Email<span class="red">*</span></label><%= f.text_field :email_address %></td>
+			  </tr>
+			  <tr>
+				<th scope="row" colspan="3">Complete the following only if applying for a Term Savings Certificate: </th>
+			  </tr>
+			  <tr class="borderbottom">
+				<td><label for="appCertAmount">Certificate Amount</label><%= f.text_field :certificate_amount %></td>
+				<td><label for="appCertTermLength">Term Length</label><%= f.text_field :term_length, :maxlength=> 10 %></td>
+				<td class="small">Transfer From:<br />
+					<%= f.radio_button("transfer_from", "Savings") %>Savings<br />
+					<%= f.radio_button("transfer_from", "Checking") %>Checking<br />
+					<%= f.radio_button("transfer_from", "Money Market") %>Money Market</td>
+			  </tr>
+			  <tr>
+				<td colspan="3" class="small"><p>By submitting this application you authorize Excel Federal Credit Union to gather any credit information considered appropriate including information from various credit information. We must have your signature on file to open this account for you . You will receive account disclosures in the mail following this request. Please complete them and return to us along with your initial deposit to finalize the opening of this share account. </p></td>
+			  </tr>
+			  
+			  <tr>
+				<td colspan="3" class="center"><%= f.submit 'Submit Application', :class=>"submit" %></td>
+			  </tr>
+			</table>
+		<% end %>
+	</div>
+  </div>
+</div>

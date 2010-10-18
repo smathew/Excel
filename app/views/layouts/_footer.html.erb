@@ -1,0 +1,202 @@
+<div id="footer" class="clearfix">
+			<div id="footerbar" class="clearfix">
+				<%= link_to "Contact Us", contact_path, :class=>"contact" %>
+				<%= mail_to "info@excelfcu.org", "Suggestion Box", :subject=>"Contact from Website", :class=>"suggestion", :onclick=>"javascript: return confirm('Please be advised that by sending us an email via this link that your email may not be secure. Do not submit any confidential information through this link (for example your social security, credit card or account number). If you have specific account inquiries that require you to send us confidential information, please use our secure email by logging onto NetBranch Online Banking using your account number and password, or call the credit union at 770-441-9235 or 1-888-441-9235 for further assistance. Thank you.')" %>
+				<%= link_to "Privacy Policy", "pdf/Privacy Policy Oct 2010.pdf", :rel=>"external" %>
+				<%= link_to "Security", security_path %>
+				<%= link_to "Disclosures", disclosures_path %>
+			</div>
+
+            <table id="center" cellpadding="10" cellspacing="10" width="90%">
+            	<tr>
+                	<td>
+				<%= link_to image_tag("https://www.securitymetrics.com/images/sm_ccsafe_wh.gif", :alt=>"SecurityMetrics Credit Card Safe"), "https://www.securitymetrics.com/site_certificate.adp?s=63%2e144%2e54%2e196&amp;i=74185", :rel=>"external" %>
+				</td>
+                <td>
+				<script src="https://seal.networksolutions.com/siteseal/javascript/siteseal.js" type="text/javascript"></script>
+				<script type="text/javascript"> SiteSeal("https://seal.networksolutions.com/images/basicrecgreen.gif", "NETSP", "none");</script>
+                </td>
+                </tr>
+                </table>
+	</div>
+		<ul id="menu" class="clearfix">
+			<li><%= link_to "<span>Home</span>", root_path, :class=>"toplevel", :id=>"homelink" %></li>
+			<li><%= link_to "<span>About&nbsp;Us</span>", about_inx_path, :class=>"toplevel" %>
+				<ul>
+					<li><%= link_to "What&#39;s So Special About a Credit Union?", whoweare_path %></li>
+					<li><%= link_to "Becoming A Member", forms_new_member_path %></li>
+					<li><%= link_to "Contact Us", contact_path %></li>
+					<li><%= link_to "Routing Number 261071548", "#" %></li>
+					<li><%= link_to "ATM Locations", atmlocations_path %></li>
+					<li><%= link_to "Branch Locations  &amp; Hours",  locations_path %></li>
+					<li><%= link_to "Approved Member Groups", member_groups_path %></li>
+					<li><%= link_to "Newsletter", newsletter_inx_path %></li>
+					<li><%= link_to "FAQs", faqs_path %></li>
+					<li><%= link_to "Holiday Schedule", holidaysched_path %></li>
+					<li><%= link_to "Federally Insured by NCUA", insuredbyncua_path %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span>Products</span>", products_inx_path, :class=>"toplevel" %>
+				<ul>
+					<li>
+						<%= link_to "Savings", savings_inx_path %>
+						<ul>
+							<li><%= link_to "Regular Savings", savings_regular_path %></li>
+							<li><%= link_to "Kids Club (ages 12  &amp; younger)", savings_kids_path %></li>
+							<li><%= link_to "CU Succeed Teen Savings (ages 13-17)", teen_path %></li>
+							<li><%= link_to "Young Adults (ages 18-24)", savings_youngadults_path %></li>
+							<li><%= link_to "Holiday Club", savings_club_path %></li>
+							<li><%= link_to "YOU NAME IT! Savings Account", products_younameit_path %></li>
+							<li><%= link_to "Savings Certificates", savings_certificates_path %></li>
+							<li><%= link_to "IRAs", savings_ira_path %></li>
+							<li><%= link_to "Money Market Accounts", savings_moneymarket_path %></li>
+							<li><%= link_to "Direct Deposit", savings_directdeposit_path %></li>
+							<li><%= link_to "Payroll Allocation", savings_payroll_path %></li>
+						</ul>
+					</li>
+					<li>
+						<%= link_to "Checking", checking_inx_path %>
+						<ul>
+					    <li><%= link_to "Checking Accounts Options", checking_accts_path %></li>
+							<li><%= link_to "CU Succeed Teen Savings (ages 13-17)", teen_path %></li>
+							<li><%= link_to "Young Adults (ages 18-24)", savings_youngadults_path %></li>
+							<li><%= link_to "Debit/Check Cards", checking_checkcard_path %></li>
+							<li><%= link_to "Overdraft Protection/ECP", checking_overdraft_path %></li>
+							<li><%= link_to "Account Switch Kit", checking_switch_path %></li>
+							<li><%= link_to "Check Ordering", "https://www.deluxe-check-order.com/ReorderHome.jsp?url=www.excelfcu.org",  :rel=>"confirm external" %></li>
+							<%= link_to "Lost or Stolen Check Cards", lost_path %></li>
+							<li><%= link_to "Stop Payment Form", "pdf/Stop Pay Request.pdf", :rel=>"external" %></li>
+							<li><%= link_to "Direct Deposit", savings_directdeposit_path %></li>
+							<li><%= link_to "Payroll Allocation", savings_payroll_path %></li>
+						</ul>
+					</li>
+					<li>
+						<%= link_to "Loans", loans_inx_path %>
+						<ul>
+							<li><%= link_to "Auto Loans", loans_auto_path %></li>
+							<li><%= link_to "Credit Cards", loans_creditcard_path %></li>
+							<li><%= link_to "Business Loans", business_loans_path %></li>
+							<li><%= link_to "First Mortgage", loans_mortgages_path %></li>
+							<li><%= link_to "Second Mortgage Loans", loans_second_mortgages_path %></li>
+							<li><%= link_to "Student Loans", "http://www.salliemae.com/smartoption/excelfcu", :rel=>"confirm external" %></li>
+							<li><%= link_to "Home Equity Line of Credit", loans_homeequity_path %></li>
+							<li><%= link_to "Other Loans", loans_other_path %></li>
+                            <li><%= link_to "SAVE As You Pay Loan", loans_saveasyoupay_path %></li>
+							<li><%= link_to "Signature Loans", loans_signature_path %></li>
+							<li><%= link_to "Secured Loans", loans_sharesecured_path %></li>
+							<li><%= link_to "Loan Rates", rates_inx_path %></li>
+							<li><%= link_to "Applications", new_loanapp_path %></li>
+							<li><%= link_to "Financial Calculators", calculators_path %></li>
+						</ul>
+					</li>
+					<li>
+						<%= link_to "Cards", card_inx_path %>
+						<ul>
+							<li><%= link_to "Lost or Stolen Card", lost_path %></li>
+							<li><%= link_to "Credit Cards", loans_creditcard_path %></li>
+							<li><%= link_to "Debit Cards", checking_checkcard_path %></li>
+							<li><%= link_to "Debit Card Application", new_atmdebitcardapp_path %></li>
+							<li><%= link_to "Credit Card Application", new_ccdisclosure_path %></li>
+							<li><%= link_to "Security for Online Purchases", loans_onlinepurchsec_path %></li>
+							<li><%= link_to "Card Account Information", "https://www.ezcardinfo.com", :rel=>"external confirm" %></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Insurance</a>
+						<ul>
+							<li><%= link_to "Guaranteed Auto Protection", gap_path %></li>
+							<li><%= link_to "Mechanical Breakdown Insurance", mbi_path %></li>
+						</ul>
+					</li>                    
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span>Services</span>", services_inx_path, :class=>"toplevel" %>
+				<ul>
+					<li><%= link_to "NetBranch/Online Banking", netbranch_path %></li>
+					<li><%= link_to "Mobile Banking", mobilebanking_path %></li>
+					<li><%= link_to "Direct Deposit", directdeposit_path %></li>
+					<li><%= link_to "Bill Pay Service", billpay_path %></li>
+					<li><%= link_to "eStatements/Online Statements", estatements_path %></li>
+					<li><%= link_to "ATM Services", atmlocations_path %></li>
+					<li><%= link_to "MoneyLine 24-Hour Automated Phone", phone_path %></li>
+                    <li><%= link_to "ScoreCard Rewards", scorecard_path %></li>
+					<li><%= link_to "Car Solutions&reg; Car Buying Services", carbuying_path %></li>
+                    <li><%= link_to "Enterprise&reg; Used Car Sales", enterprise_path %></li>
+					<li><%= link_to "Identity Theft Services", idtheft_path %></li>
+                    <li><%= link_to "Wiring Funds", wiringfunds_path %></li>
+					<li><%= link_to "Resources  &amp; Links", links_path %></li>
+                    <li><%= link_to "Financial Calculators", calculators_path %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span>Business&nbsp;Services</span>", business_inx_path, :class=>"toplevel" %>
+				<ul>
+                	<li><%= link_to "Business Account Requirements", business_requirements_path %></li>
+                    <li><%= link_to "Business Account Application", "pdf/Signature Card Business Account.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Business Loans", business_loans_path %></li>
+					<li><%= link_to "Business Checking", business_checking_path %></li>
+					<li><%= link_to "Quickbooks&reg; Services", business_quickbooks_path %></li>
+					<li><%= link_to "Business Savings", business_savings_path %></li>
+					<li><%= link_to "Commercial Mortgage Loans", "https://www.cubsllc.com", :rel=>"confirm external" %></li>
+					<li><%= link_to "Courier Pick-Up Services", business_courier_path %></li>
+					<li><%= link_to "Health Insurance", business_payroll_path %></li>
+					<li><%= link_to "Merchant Processing", business_merchant_path %></li>
+					<li><%= link_to "Payroll Processing", business_payroll_path %></li>
+					<li><%= link_to "Retirement Planning", business_payroll_path %></li>
+					<li><%= link_to "Business Bill Pay and Demo", "https://www.businessbillpay-e.com/v2/login.aspx?instid=38905", :rel=>"confirm external" %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span>Rates</span>", rates_inx_path, :class=>"toplevel" %>
+				<ul>
+					<li><%= link_to "Savings Rates", rates_share_path %></li>
+					<li><%= link_to "Loan Rates", rates_inx_path %>
+                    	<ul>
+                        	<li><%= link_to "Business Loans", rates_loan_business_path %></li>
+                            <li><%= link_to "Consumer Loans", rates_loan_consumer_path %></li>
+                        </ul>
+                    </li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span>Forms</span>", forms_app_inx_path, :class=>"toplevel" %>
+				<ul>
+					<li><%= link_to "Deposit Ticket", "pdf/DepositTicket.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Loan Advance Request", "pdf/13996-2.pdf", :onclick=>"return confirm('If you have been approved to receive a loan from EXCEL since July 1, 2010 and would like to borrow additional funds, please complete the following LOAN ADVANCE REQUEST form and fax it to 770-582-3877. If you would like to borrow money and have not had a loan approved by EXCEL since July 1st, 2010, please close this window and complete a loan application found under the APPLICATIONS tab on our website.')" %> </li>
+					<li><%= link_to "Address Change Form", "pdf/change_address.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Checking Account Switch Kit", checking_switch_path %></li>
+					<li><%= link_to "Credit Card Balance Transfer", "pdf/Balance%20Transfers%20Form.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Direct Deposit Add/Change", directdeposit_path %></li>
+					<li><%= link_to "Password/PIN Request", new_pinrequest_path %></li>
+					<li><%= link_to "Deposit Allocation Form", "pdf/Direct%20Deposit%20%20Payroll%20Allocation%20Form.pdf", :rel=>"external" %></li>
+					<li><%= link_to "TotaLoan Application/Agreement", "pdf/TotaLoan.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Wire Transfer Request", "pdf/MemberWireOut.pdf", :rel=>"external" %></li>
+					<li><%= link_to "ACH Affidavit", "pdf/ACH Affidavit.pdf", :rel=>"external" %></li>
+					<li><%= link_to "ACH Stop Payment Request", "pdf/stoppayment.pdf", :rel=>"external" %></li>
+				</ul>
+			</li>
+			<li>
+				<%= link_to "<span class=\"last\">Applications</span>", apps_path, :class=>"toplevel" %>
+				<ul>
+					<li><%= link_to "New Member", forms_new_member_path %></li>
+                    <li><%= link_to "Scholarship Application","pdf/2010 EXCEL Federal Credit Union Scholarship Application.pdf", :rel=>"external" %></li>
+					<li><%= link_to "Savings Accounts", new_shareapp_path %></li>
+					<li><%= link_to "Checking Account", new_shareapp_path %></li>
+					<li><%= link_to "ATM/Debit Card", new_atmdebitcardapp_path %></li>
+					<li><%= link_to "ATM Debit Card Opt In/Out", new_rege_path %></li>
+                    <li><%= link_to "Credit Card", new_ccdisclosure_path %></li>
+					<li><%= link_to "Auto Loan", new_loanapp_path %></li>
+					<li><%= link_to "Consumer Loan", new_loanapp_path %></li>
+					<li><%= link_to "Home Equity Line-of-Credit", new_helocagree_path %></li>
+					<li><%= link_to "First Mortgage Loan", "https://www.cufs.org", :rel=>"external confirm" %></li>
+					<li><%= link_to "Fixed Rate Second Mortgage", new_secmoragree_path %></li>
+					<li><%= link_to "IRAs", new_shareapp_path %></li>
+					<li><%= link_to "Money Market", new_shareapp_path %></li>
+					<li><%= link_to "Savings Certificate", new_shareapp_path %></li>
+                    <li><%= link_to "Holiday Club", new_shareapp_path %></li>
+				</ul>
+			</li>
+		</ul>
+	</div>

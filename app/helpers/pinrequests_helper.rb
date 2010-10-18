@@ -1,0 +1,2 @@
+module PinrequestsHelper
+end

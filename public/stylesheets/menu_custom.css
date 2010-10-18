@@ -1,0 +1,86 @@
+
+
+/***** CUSTOM STYLING *****/
+ul#menu {
+	margin: 0;
+	font-size: .9em;
+	width: 740px;
+	height: 86px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin: 0 0 0 -370px;
+	font-size: .9em;
+	background: url(../images/menubg.jpg) no-repeat left;
+}
+
+ul#menu li a#homelink {
+	height: 86px;
+	padding-top: 0;
+	width: 165px;
+}
+
+ul#menu li a#homelink span {
+	display: none;
+}
+
+ul#menu li a.toplevel {
+	height: 61px;
+	padding-top: 25px;
+}
+
+ul#menu li a.toplevel span {
+	display: inline-block;
+	padding: 1em .7em;
+	color: #375360;
+	font-weight: bold;
+	font-size: 1.1em;
+	border-right: 1.5px solid #375360;
+	
+}
+
+ul#menu li a.toplevel span.last {
+	border-right: 0 none;
+	padding-right: 0;
+}
+
+ul#menu li a {
+	text-decoration: none;
+}
+
+ul#menu li:hover, ul#menu li.sfhover {
+	background-color: transparent;
+}
+
+ul#menu li ul {
+	border: 1px solid #b2b1b1;
+	background-color: #dedddd;
+}
+
+ul#menu > li > ul {
+	border-top: 0 none;
+}
+
+ul#menu li ul li {
+	border: 1px solid #dedddd;
+	/*
+	border: 1px solid red;
+	*/
+}
+
+ul#menu li ul li a {
+	padding: 0 .5em;
+	color: #004040;
+	font-family: verdana, arial, helvitica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+ul#menu li ul li:hover, ul#menu li ul li.sfhover {
+	background-color: #eeeae8;
+}
+
+ul#menu li li:hover ul, ul#menu li li.sfhover ul {
+	top: -2px;
+	left: 1px;
+}

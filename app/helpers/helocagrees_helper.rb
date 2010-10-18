@@ -1,0 +1,2 @@
+module HelocagreesHelper
+end

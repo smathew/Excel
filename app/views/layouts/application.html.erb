@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Excel Federal Credit Union</title>
+	<%= stylesheet_link_tag 'excel' %>
+	<%= stylesheet_link_tag 'forms' %>
+	<%= stylesheet_link_tag 'menu_base' %>
+	<%= stylesheet_link_tag 'menu_custom' %>
+	<%= stylesheet_link_tag 'ie7' %>	
+	
+	<%= javascript_include_tag "functions" %>
+	<%= javascript_include_tag "menu" %>
+	<%= javascript_include_tag "hblogin" %>
+	<%= javascript_include_tag "client" %>
+	<%= javascript_include_tag "site" %>
+	<%= javascript_include_tag "contentslider" %>
+
+</head>
+<body>
+	<div id="container">
+    <%= yield %>
+    <%= render "layouts/footer" %>
+</body>
+</html>
